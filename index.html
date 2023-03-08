@@ -122,12 +122,12 @@
   </li>
         <li class="menu-item menu-item-tags">
 
-    <a href="/tags/" rel="section"><i class="fa fa-fw fa-tags"></i>标签<span class="badge">0</span></a>
+    <a href="/tags/" rel="section"><i class="fa fa-fw fa-tags"></i>标签<span class="badge">1</span></a>
 
   </li>
         <li class="menu-item menu-item-categories">
 
-    <a href="/categories/" rel="section"><i class="fa fa-fw fa-th"></i>分类<span class="badge">0</span></a>
+    <a href="/categories/" rel="section"><i class="fa fa-fw fa-th"></i>分类<span class="badge">1</span></a>
 
   </li>
         <li class="menu-item menu-item-archives">
@@ -199,7 +199,7 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="https://lllmf.github.io/2023/03/07/hello-world/">
+    <link itemprop="mainEntityOfPage" href="https://lllmf.github.io/2022/03/07/hello-world/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/avatar.jpg">
@@ -213,7 +213,7 @@
       <header class="post-header">
         <h2 class="post-title" itemprop="name headline">
           
-            <a href="/2023/03/07/hello-world/" class="post-title-link" itemprop="url">1.搭建自己的技术博客</a>
+            <a href="/2022/03/07/hello-world/" class="post-title-link" itemprop="url">1.搭建自己的技术博客</a>
         </h2>
 
         <div class="post-meta">
@@ -223,11 +223,20 @@
               </span>
               <span class="post-meta-item-text">发表于</span>
 
-              <time title="创建时间：2023-03-07 18:25:15" itemprop="dateCreated datePublished" datetime="2023-03-07T18:25:15+08:00">2023-03-07</time>
+              <time title="创建时间：2022-03-07 18:15:12" itemprop="dateCreated datePublished" datetime="2022-03-07T18:15:12+08:00">2022-03-07</time>
+            </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/%E6%8A%80%E6%9C%AF%E5%8D%9A%E5%AE%A2/" itemprop="url" rel="index"><span itemprop="name">技术博客</span></a>
+                </span>
             </span>
 
           
-            <span id="/2023/03/07/hello-world/" class="post-meta-item leancloud_visitors" data-flag-title="1.搭建自己的技术博客" title="阅读次数">
+            <span id="/2022/03/07/hello-world/" class="post-meta-item leancloud_visitors" data-flag-title="1.搭建自己的技术博客" title="阅读次数">
               <span class="post-meta-item-icon">
                 <i class="fa fa-eye"></i>
               </span>
@@ -242,8 +251,8 @@
       </span>
       <span class="post-meta-item-text">Valine：</span>
     
-    <a title="valine" href="/2023/03/07/hello-world/#valine-comments" itemprop="discussionUrl">
-      <span class="post-comments-count valine-comment-count" data-xid="/2023/03/07/hello-world/" itemprop="commentCount"></span>
+    <a title="valine" href="/2022/03/07/hello-world/#valine-comments" itemprop="discussionUrl">
+      <span class="post-comments-count valine-comment-count" data-xid="/2022/03/07/hello-world/" itemprop="commentCount"></span>
     </a>
   </span>
   
@@ -267,7 +276,7 @@
 <h3 id="2-在本机安装Node-js"><a href="#2-在本机安装Node-js" class="headerlink" title="2. 在本机安装Node.js"></a>2. 在本机安装<a target="_blank" rel="noopener" href="https://nodejs.org/zh-cn/download/">Node.js</a></h3><p>选择64位的 msi 版本。</p>
 <p>注意选择安装目录（如果跟我一样C盘容量不大的话）。</p>
 <p>安装完毕，在 cmd 窗口输入命令 <code>node -v</code> 和 <code>npm -v</code> 查看版本。</p>
-<p>注意全局包的下载路径也是默认在C盘，<code>npm root -g</code> 命令查看当前路径。而将其挪到其他目录的方法如下：</p>
+<p>注意：全局包的下载路径也是默认在C盘，<code>npm root -g</code> 命令查看当前路径。而将其挪到其他目录的方法如下：</p>
 <h4 id="修改全局包路径"><a href="#修改全局包路径" class="headerlink" title="修改全局包路径"></a>修改全局包路径</h4><p>在 nodejs 的安装目录（我的在D盘）下创建两个文件夹，<code>node_global</code> 全局包存放，<code>node_cache</code> node缓存。</p>
 <p>在 cmd 执行下面两条命令：</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">npm config <span class="built_in">set</span> prefix <span class="string">&quot;...\...\nodejs\node_global&quot;</span></span><br><span class="line">npm config <span class="built_in">set</span> cache <span class="string">&quot;...\...\nodejs\node_cache&quot;</span></span><br></pre></td></tr></table></figure>
@@ -329,20 +338,20 @@
 <p>再启动查看 <code>http://localhost:4000</code> 界面情况。</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">hexo g -d</span><br><span class="line">hexo s</span><br></pre></td></tr></table></figure>
 
+<h4 id="附页"><a href="#附页" class="headerlink" title="附页"></a>附页</h4><h5 id="一些命令解释："><a href="#一些命令解释：" class="headerlink" title="一些命令解释："></a>一些命令解释：</h5><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">hexo init blog <span class="comment"># 创建Hexo工程</span></span><br><span class="line">hexo new <span class="string">&quot;file_name&quot;</span> <span class="comment"># 在post下创建文件</span></span><br><span class="line">hexo generate <span class="comment"># 生成静态文件。使用Hexo引擎将Markdown格式的文件解析成可以使用浏览器查看的HTML文件，HTML文件存储在blog/public目录下。</span></span><br><span class="line">hexo server <span class="comment"># </span></span><br></pre></td></tr></table></figure>
 
-
-
-
-
-
-<p><code>hexo d</code> 有报错：</p>
-<p><code>ipconfig/flushdns</code> 刷新 DNS 解析缓存。</p>
-<p>在终端执行git clone时提示Failed to connect to github.com port 443:Connection regused错误：</p>
-<p>解决方案如下：</p>
-<p>本地有连接<a target="_blank" rel="noopener" href="https://so.csdn.net/so/search?q=vpn&spm=1001.2101.3001.7020">vpn</a>，通过在终端输入以下命令解决：</p>
-<p>git config –global http.proxy <a target="_blank" rel="noopener" href="http://127.0.0.1:7890/">http://127.0.0.1:7890</a></p>
-<p>说明：7890为本地混合配置的端口号</p>
-<h4 id="集成Gitalk，集成Valine"><a href="#集成Gitalk，集成Valine" class="headerlink" title="集成Gitalk，集成Valine"></a>集成Gitalk，集成Valine</h4><p><a target="_blank" rel="noopener" href="https://juejin.cn/post/6929775469243924488">https://juejin.cn/post/6929775469243924488</a></p>
+<h5 id="一些踩坑记录："><a href="#一些踩坑记录：" class="headerlink" title="一些踩坑记录："></a>一些踩坑记录：</h5><p><code>hexo d</code> 有报错：</p>
+<p>试试输命令 <code>ipconfig/flushdns</code> ，刷新 DNS 解析缓存。</p>
+<p>如果在终端执行git clone时提示 <code>Failed to connect to github.com port 443:Connection regused</code> 错误：</p>
+<p>找到的解决方案：</p>
+<p>本地有连接<a target="_blank" rel="noopener" href="https://so.csdn.net/so/search?q=vpn&spm=1001.2101.3001.7020">vpn</a>，在终端输入命令：<code>git config --global http.proxy http://127.0.0.1:7890</code> 。(说明：7890为本地混合配置的端口号)</p>
+<h3 id="3-添加互动——评论区"><a href="#3-添加互动——评论区" class="headerlink" title="3. 添加互动——评论区"></a>3. 添加互动——评论区</h3><h4 id="3-1-集成Gitalk"><a href="#3-1-集成Gitalk" class="headerlink" title="3.1 集成Gitalk"></a>3.1 集成Gitalk</h4><p>主要参考的是这个<a target="_blank" rel="noopener" href="https://www.toimc.com/hexo-usage-3/">hexo主题next中gitalk配置与评论初始化</a>。作者直接写</p>
+<p>注意：1. 注册OAuth application时，Homepage URL和Authorization callback URL都填 <code>https://yourname.github.io</code> 。2. <code>talk-auto-init.js</code> 文件中的配置信息改成自己的信息。</p>
+<p>我遇到的问题是 gitalk模块可以正常渲染，但是用户登录会报错：Error: Network Error。</p>
+<p>原因：github官方API，可能会限制调用。</p>
+<p>找到的解决方法：在 <code>...\themes\next\_config.yml</code>文件里， gitalk 的 proxy 如果是 <code>https://github.com/login/oauth/access_token</code> ，则改为 <code>https://cors-anywhere.azm.workers.dev/https://github.com/login/oauth/access_token</code> 。</p>
+<h4 id="3-2-集成Valine"><a href="#3-2-集成Valine" class="headerlink" title="3.2 集成Valine"></a>3.2 集成Valine</h4><p>主要参考：</p>
+<p><a target="_blank" rel="noopener" href="https://juejin.cn/post/6929775469243924488">https://juejin.cn/post/6929775469243924488</a></p>
 <p><a target="_blank" rel="noopener" href="https://www.jianshu.com/p/b9e73c881729">https://www.jianshu.com/p/b9e73c881729</a></p>
 
       
@@ -430,6 +439,18 @@
           <span class="site-state-item-count">1</span>
           <span class="site-state-item-name">日志</span>
         </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+            <a href="/categories/">
+          
+        <span class="site-state-item-count">1</span>
+        <span class="site-state-item-name">分类</span></a>
+      </div>
+      <div class="site-state-item site-state-tags">
+            <a href="/tags/">
+          
+        <span class="site-state-item-count">1</span>
+        <span class="site-state-item-name">标签</span></a>
       </div>
   </nav>
 </div>
