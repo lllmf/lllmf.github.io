@@ -4,10 +4,32 @@
   <url>
     <loc>https://lllmf.github.io/2022/03/07/hello-world/</loc>
     
-    <lastmod>2023-03-08T15:14:12.021Z</lastmod>
+    <lastmod>2023-03-08T15:44:27.261Z</lastmod>
     
     <date>1646648112000</date>
     <title>1.搭建自己的技术博客 | Hexo</title>
+    
+    <desc></desc>
+  </url>
+  
+  <url>
+    <loc>https://lllmf.github.io/2023/03/08/deep-learning/</loc>
+    
+    <lastmod>2023-03-08T15:43:35.559Z</lastmod>
+    
+    <date>1678289997000</date>
+    <title>deep_learning | Hexo</title>
+    
+    <desc></desc>
+  </url>
+  
+  <url>
+    <loc>https://lllmf.github.io/404.html</loc>
+    
+    <lastmod>2023-03-08T15:37:43.571Z</lastmod>
+    
+    <date>1678289863571</date>
+    <title> | Hexo</title>
     
     <desc></desc>
   </url>
@@ -41,17 +63,6 @@
     
     <date>1678246542000</date>
     <title>标签 | Hexo</title>
-    
-    <desc></desc>
-  </url>
-  
-  <url>
-    <loc>https://lllmf.github.io/404.html</loc>
-    
-    <lastmod>2023-03-08T04:22:02.227Z</lastmod>
-    
-    <date>1678249322227</date>
-    <title> | Hexo</title>
     
     <desc></desc>
   </url>
