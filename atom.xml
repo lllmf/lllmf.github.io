@@ -6,7 +6,7 @@
   <link href="https://lllmf.github.io/atom.xml" rel="self"/>
   
   <link href="https://lllmf.github.io/"/>
-  <updated>2023-03-08T15:43:35.559Z</updated>
+  <updated>2023-03-09T08:36:29.780Z</updated>
   <id>https://lllmf.github.io/</id>
   
   <author>
@@ -21,17 +21,10 @@
     <link href="https://lllmf.github.io/2023/03/08/deep-learning/"/>
     <id>https://lllmf.github.io/2023/03/08/deep-learning/</id>
     <published>2023-03-08T15:39:57.000Z</published>
-    <updated>2023-03-08T15:43:35.559Z</updated>
+    <updated>2023-03-09T08:36:29.780Z</updated>
     
     
-      
-      
-        
-        
-    <summary type="html">&lt;h1 id=&quot;深度学习&quot;&gt;&lt;a href=&quot;#深度学习&quot; class=&quot;headerlink&quot; title=&quot;深度学习&quot;&gt;&lt;/a&gt;深度学习&lt;/h1&gt;&lt;p&gt;深度学习是机器学习的一个子集。&lt;/p&gt;
-&lt;h2 id=&quot;预备知识&quot;&gt;&lt;a href=&quot;#预备知识&quot;</summary>
-        
-      
+    <summary type="html">&lt;h1 id=&quot;深度学习&quot;&gt;&lt;a href=&quot;#深度学习&quot; class=&quot;headerlink&quot; title=&quot;深度学习&quot;&gt;&lt;/a&gt;深度学习&lt;/h1&gt;&lt;p&gt;深度学习是机器学习的一个子集。&lt;/p&gt;</summary>
     
     
     
@@ -47,16 +40,11 @@
     <link href="https://lllmf.github.io/2022/03/07/hello-world/"/>
     <id>https://lllmf.github.io/2022/03/07/hello-world/</id>
     <published>2022-03-07T10:15:12.000Z</published>
-    <updated>2023-03-09T08:27:40.062Z</updated>
+    <updated>2023-03-09T08:36:00.921Z</updated>
     
     
-      
-      
-        
-        
-    <summary type="html">&lt;h2 id=&quot;0-前言&quot;&gt;&lt;a href=&quot;#0-前言&quot; class=&quot;headerlink&quot; title=&quot;0. 前言&quot;&gt;&lt;/a&gt;0.</summary>
-        
-      
+    <summary type="html">&lt;h2 id=&quot;0-前言&quot;&gt;&lt;a href=&quot;#0-前言&quot; class=&quot;headerlink&quot; title=&quot;0. 前言&quot;&gt;&lt;/a&gt;0. 前言&lt;/h2&gt;&lt;p&gt;mff开始搭建自己的技术博客啦（划掉）。&lt;/p&gt;
+&lt;p&gt;搭建内容：github(提供仓库、域名)+hexo(博客搭建工具)+next(一款简洁的hexo主题)，ps: 互动功能，集成Gitalk、集成Valine(评论区)。&lt;/p&gt;</summary>
     
     
     

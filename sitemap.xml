@@ -2,25 +2,25 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
-    <loc>https://lllmf.github.io/2022/03/07/hello-world/</loc>
-    
-    <lastmod>2023-03-09T08:27:40.062Z</lastmod>
-    
-    <date>1646648112000</date>
-    <title>1.搭建自己的技术博客 | Hexo</title>
-    
-    <desc></desc>
-  </url>
-  
-  <url>
     <loc>https://lllmf.github.io/2023/03/08/deep-learning/</loc>
     
-    <lastmod>2023-03-08T15:43:35.559Z</lastmod>
+    <lastmod>2023-03-09T08:36:29.780Z</lastmod>
     
     <date>1678289997000</date>
     <title>deep_learning | Hexo</title>
     
-    <desc></desc>
+    <desc>深度学习深度学习是机器学习的一个子集。</desc>
+  </url>
+  
+  <url>
+    <loc>https://lllmf.github.io/2022/03/07/hello-world/</loc>
+    
+    <lastmod>2023-03-09T08:36:00.921Z</lastmod>
+    
+    <date>1646648112000</date>
+    <title>1.搭建自己的技术博客 | Hexo</title>
+    
+    <desc>0. 前言mff开始搭建自己的技术博客啦（划掉）。 搭建内容：github(提供仓库、域名)+hexo(博客搭建工具)+next(一款简洁的hexo主题)，ps: 互动功能，集成Gitalk、集成Valine(评论区)。</desc>
   </url>
   
   <url>
