@@ -6,7 +6,7 @@
   <link href="https://lllmf.github.io/atom.xml" rel="self"/>
   
   <link href="https://lllmf.github.io/"/>
-  <updated>2023-03-17T15:09:04.105Z</updated>
+  <updated>2023-03-17T15:33:47.593Z</updated>
   <id>https://lllmf.github.io/</id>
   
   <author>
@@ -17,11 +17,30 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
-    <title>JS_vs_JSX</title>
+    <title>组件库盘点</title>
+    <link href="https://lllmf.github.io/2023/03/17/Component-Library/"/>
+    <id>https://lllmf.github.io/2023/03/17/Component-Library/</id>
+    <published>2023-03-17T15:18:37.000Z</published>
+    <updated>2023-03-17T15:33:47.593Z</updated>
+    
+    
+    <summary type="html">&lt;h2 id=&quot;0-前言&quot;&gt;&lt;a href=&quot;#0-前言&quot; class=&quot;headerlink&quot; title=&quot;0.前言&quot;&gt;&lt;/a&gt;0.前言&lt;/h2&gt;&lt;p&gt;本篇将简要盘点一些使用过或者感兴趣的 UI 组件库，包括Ant Design，Element Plus，Semi Design，WeUI。希望能独立辨析它们各自的风格和优势，可能也会学习一下实现代码，相当于是一篇学习记录和使用笔记~&lt;/p&gt;</summary>
+    
+    
+    
+    <category term="技术博客" scheme="https://lllmf.github.io/categories/%E6%8A%80%E6%9C%AF%E5%8D%9A%E5%AE%A2/"/>
+    
+    
+    <category term="技术" scheme="https://lllmf.github.io/tags/%E6%8A%80%E6%9C%AF/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>JS vs JSX</title>
     <link href="https://lllmf.github.io/2023/03/11/JS-vs-JSX/"/>
     <id>https://lllmf.github.io/2023/03/11/JS-vs-JSX/</id>
     <published>2023-03-11T02:55:00.000Z</published>
-    <updated>2023-03-17T15:09:04.105Z</updated>
+    <updated>2023-03-17T15:23:22.151Z</updated>
     
     
     <summary type="html">&lt;h2 id=&quot;0-前言&quot;&gt;&lt;a href=&quot;#0-前言&quot; class=&quot;headerlink&quot; title=&quot;0. 前言&quot;&gt;&lt;/a&gt;0. 前言&lt;/h2&gt;&lt;p&gt;写前一篇（前端框架）的时候突然想到，在使用React框架的时候使用的语言是JSX，对于初学者来说可能接受不困难，但是在不熟练JS的情况下直接开始学框架，在语法规范和代码含义上是不是多少有点问题。&lt;/p&gt;
