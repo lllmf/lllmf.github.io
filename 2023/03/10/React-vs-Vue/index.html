@@ -28,7 +28,7 @@
 <meta property="og:description" content="0. 前言在之前做过的项目里，我采用的前端框架都是 React，但是当我在使用中搜索一些方法或者函数问题的时候，发现会出现很多 Vue 的帖子。这让我发现两者可能有很多相似点。 本篇将横向比较两者的异同，主要目的是分析它们的受众。（适合初学者阅读，但不是指导性教程。）">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:published_time" content="2023-03-10T08:22:32.000Z">
-<meta property="article:modified_time" content="2023-03-15T13:38:23.567Z">
+<meta property="article:modified_time" content="2023-03-26T16:22:00.959Z">
 <meta property="article:author" content="Mff">
 <meta property="article:tag" content="技术">
 <meta name="twitter:card" content="summary">
@@ -334,12 +334,20 @@
 <h4 id="02-搭建"><a href="#02-搭建" class="headerlink" title="02. 搭建"></a>02. 搭建</h4><p>我已经安装过了Node.js，版本为 v18.14.2。在命令行输入下面的命令，安装并执行 create-vue（Vue官方的项目脚手架工具）。</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm init vue@latest</span><br></pre></td></tr></table></figure>
 
+<p>选择的可选选项：</p>
+<ul>
+<li>TypeScript</li>
+<li>Vue Router</li>
+<li>Pinia</li>
+<li>Vitest</li>
+</ul>
 <p>按引领完成项目创建后，在项目根目录执行命令：</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">npm install</span><br><span class="line">npm run dev</span><br></pre></td></tr></table></figure>
 
 <p>构建工具 <a target="_blank" rel="noopener" href="https://cn.vitejs.dev/">Vite</a> 在上面的步骤默认安装好了。</p>
 <p>采用官方推荐的 IDE 配置：Visual Studio Code + Volar 扩展。</p>
 <p>ps: 上面的命令<code>npm run dev</code>意思是在开发环境运行，如果想在生产环境运行输入<code>npm run build</code>。（开发环境有提示体验的功能，产生性能开销。所以当部署到生产环境中时，应该移除所有未使用的、仅用于开发环境的代码分支，来获得更小的包体积和更好的性能。）</p>
+<p>ps： <code>bash: vue: command not found</code> 的问题，原因是不是全局安装vue。</p>
 <h4 id="03-组件库"><a href="#03-组件库" class="headerlink" title="03. 组件库"></a>03. 组件库</h4><p>注意 Vue3 项目使用新版的 Element Plus（Vue2 对应的是Element UI）。在项目根目录输入下面的指令：</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install element-plus --save</span><br></pre></td></tr></table></figure>
 
@@ -357,19 +365,26 @@
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install vue-router@4</span><br></pre></td></tr></table></figure>
 
 <h4 id="04-立项"><a href="#04-立项" class="headerlink" title="04. 立项"></a>04. 立项</h4><p>既然决定通过实践了解Vue，那我就要选定一个项目内容了。我第一次接触前端知识的大气污染可视化项目，主要是通过在HTML页面中使用 jQuery 库实现数据渲染等，没有使用前端框架。于是这次我准备在Vue框架下，重新实现之前做的这个项目，最终可能会对界面效果进行比较分析。</p>
-<h4 id="05-上手"><a href="#05-上手" class="headerlink" title="05. 上手"></a>05. 上手</h4><p>（coding）</p>
-<p>预期的组件树长这样：</p>
+<h4 id="05-上手"><a href="#05-上手" class="headerlink" title="05. 上手"></a>05. 上手</h4><p>预期的组件树长这样：</p>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">App (root component)</span><br><span class="line">|- Visualization</span><br><span class="line">	|- InputTime</span><br><span class="line">	|- Charts</span><br><span class="line">	|- MyBar</span><br></pre></td></tr></table></figure>
 
 <p>多个视图所使用的状态数据是一致的，所以需要在多个组件实例间共享，因此选择用 <code>reactive()</code> 来创建一个响应式对象，并将它导入到多个组件中。</p>
 <figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// store.js</span></span><br><span class="line"><span class="keyword">import</span> &#123; reactive &#125; <span class="keyword">from</span> <span class="string">&#x27;vue&#x27;</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">export</span> <span class="keyword">const</span> store = <span class="title function_">reactive</span>(&#123;</span><br><span class="line">  <span class="attr">count</span>: <span class="number">0</span></span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
 
+<p>——以下为完成代码后的文字记录：</p>
+<p>实际上组件结构：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">App (root component)</span><br><span class="line">|- assets</span><br><span class="line">	|- datas</span><br><span class="line">	|- css文件</span><br><span class="line">	|- images</span><br><span class="line">|- components</span><br><span class="line">	|- header.vue //头部组件</span><br><span class="line">	|- sidebar	//侧边栏组件</span><br><span class="line">|- router //管理路由</span><br><span class="line">|- stores</span><br><span class="line">	|- 储存可视化数据文件、侧边栏数据文件</span><br><span class="line">|- views</span><br><span class="line">	|- dashboard.vue //系统主页</span><br><span class="line">	|- 各种图表视图</span><br><span class="line">	|- 引入地图</span><br></pre></td></tr></table></figure>
 
-
-
-
-
-
+<p>我重新创建了一个TS版本的vue项目，发现比起直接创建的JS版本的文件夹，格式会更有条理。</p>
+<p>即上文提到的，在创建vue项目时选择了以下可选选项：</p>
+<ul>
+<li>TypeScript</li>
+<li>Vue Router</li>
+<li>Pinia</li>
+<li>Vitest</li>
+</ul>
+<p>过程中比较麻烦的地方有，高德地图和ECharts没有提供Vue版本的可参考文件。在Vue上面使用它们，在HTML网页中使用还是有比较大的区别的。</p>
+<p>另外我还在探索提供VueUse给项目添加暗黑模式。目前是已经加上了按钮，实现部分元素的切换，但是右侧内容的背景等部分未渲染。</p>
 
     </div>
 

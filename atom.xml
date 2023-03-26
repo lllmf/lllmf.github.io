@@ -6,7 +6,7 @@
   <link href="https://lllmf.github.io/atom.xml" rel="self"/>
   
   <link href="https://lllmf.github.io/"/>
-  <updated>2023-03-17T15:33:47.593Z</updated>
+  <updated>2023-03-26T16:08:28.895Z</updated>
   <id>https://lllmf.github.io/</id>
   
   <author>
@@ -21,10 +21,11 @@
     <link href="https://lllmf.github.io/2023/03/17/Component-Library/"/>
     <id>https://lllmf.github.io/2023/03/17/Component-Library/</id>
     <published>2023-03-17T15:18:37.000Z</published>
-    <updated>2023-03-17T15:33:47.593Z</updated>
+    <updated>2023-03-26T16:08:28.895Z</updated>
     
     
-    <summary type="html">&lt;h2 id=&quot;0-前言&quot;&gt;&lt;a href=&quot;#0-前言&quot; class=&quot;headerlink&quot; title=&quot;0.前言&quot;&gt;&lt;/a&gt;0.前言&lt;/h2&gt;&lt;p&gt;本篇将简要盘点一些使用过或者感兴趣的 UI 组件库，包括Ant Design，Element Plus，Semi Design，WeUI。希望能独立辨析它们各自的风格和优势，可能也会学习一下实现代码，相当于是一篇学习记录和使用笔记~&lt;/p&gt;</summary>
+    <summary type="html">&lt;h2 id=&quot;0-前言&quot;&gt;&lt;a href=&quot;#0-前言&quot; class=&quot;headerlink&quot; title=&quot;0.前言&quot;&gt;&lt;/a&gt;0.前言&lt;/h2&gt;&lt;p&gt;本篇将简要盘点一些使用过或者感兴趣的 UI 组件库，包括Ant Design，Element Plus，Semi Design，WeUI。希望能独立辨析它们各自的风格和优势，可能也会学习一下实现代码，相当于是一篇学习记录和使用笔记~&lt;/p&gt;
+&lt;p&gt;另外，各组件库的技术文档就是用各自的组件搭建的，所以我感觉参观组件库的最简单方法其实就是看它们技术文档。&lt;/p&gt;</summary>
     
     
     
@@ -60,7 +61,7 @@
     <link href="https://lllmf.github.io/2023/03/10/React-vs-Vue/"/>
     <id>https://lllmf.github.io/2023/03/10/React-vs-Vue/</id>
     <published>2023-03-10T08:22:32.000Z</published>
-    <updated>2023-03-15T13:38:23.567Z</updated>
+    <updated>2023-03-26T16:22:00.959Z</updated>
     
     
     <summary type="html">&lt;h2 id=&quot;0-前言&quot;&gt;&lt;a href=&quot;#0-前言&quot; class=&quot;headerlink&quot; title=&quot;0. 前言&quot;&gt;&lt;/a&gt;0. 前言&lt;/h2&gt;&lt;p&gt;在之前做过的项目里，我采用的前端框架都是 React，但是当我在使用中搜索一些方法或者函数问题的时候，发现会出现很多 Vue 的帖子。这让我发现两者可能有很多相似点。&lt;/p&gt;
@@ -99,7 +100,7 @@
     <link href="https://lllmf.github.io/2022/03/07/hello-world/"/>
     <id>https://lllmf.github.io/2022/03/07/hello-world/</id>
     <published>2022-03-07T10:15:12.000Z</published>
-    <updated>2023-03-11T03:06:02.290Z</updated>
+    <updated>2023-03-21T15:46:13.580Z</updated>
     
     
     <summary type="html">&lt;h2 id=&quot;0-前言&quot;&gt;&lt;a href=&quot;#0-前言&quot; class=&quot;headerlink&quot; title=&quot;0. 前言&quot;&gt;&lt;/a&gt;0. 前言&lt;/h2&gt;&lt;p&gt;mff开始搭建自己的技术博客啦（划掉）。&lt;/p&gt;
