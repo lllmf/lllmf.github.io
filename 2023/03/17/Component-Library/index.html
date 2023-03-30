@@ -17,7 +17,7 @@
 
 <script id="hexo-configurations">
     var NexT = window.NexT || {};
-    var CONFIG = {"hostname":"lllmf.github.io","root":"/","scheme":"Pisces","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":"gitalk","storage":true,"lazyload":false,"nav":{"gitalk":{"order":-2},"disqusjs":{"text":"Load Disqus","order":-1}},"activeClass":"gitalk"},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},"path":"search.json"};
+    var CONFIG = {"hostname":"lllmf.github.io","root":"/","scheme":"Pisces","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":"gitalk","storage":true,"lazyload":false,"nav":{"gitalk":{"order":-2},"disqusjs":{"text":"Load Disqus","order":-1}},"activeClass":"gitalk"},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},"path":"search.xml"};
   </script>
 
   <meta name="description" content="0.前言本篇将简要盘点一些使用过或者感兴趣的 UI 组件库，包括Ant Design，Element Plus，Semi Design，WeUI。希望能独立辨析它们各自的风格和优势，可能也会学习一下实现代码，相当于是一篇学习记录和使用笔记~ 另外，各组件库的技术文档就是用各自的组件搭建的，所以我感觉参观组件库的最简单方法其实就是看它们技术文档。">
@@ -28,7 +28,7 @@
 <meta property="og:description" content="0.前言本篇将简要盘点一些使用过或者感兴趣的 UI 组件库，包括Ant Design，Element Plus，Semi Design，WeUI。希望能独立辨析它们各自的风格和优势，可能也会学习一下实现代码，相当于是一篇学习记录和使用笔记~ 另外，各组件库的技术文档就是用各自的组件搭建的，所以我感觉参观组件库的最简单方法其实就是看它们技术文档。">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:published_time" content="2023-03-17T15:18:37.000Z">
-<meta property="article:modified_time" content="2023-03-26T16:08:28.895Z">
+<meta property="article:modified_time" content="2023-03-30T15:19:22.587Z">
 <meta property="article:author" content="Mff">
 <meta property="article:tag" content="技术">
 <meta name="twitter:card" content="summary">
@@ -282,7 +282,7 @@
 <p>Antd 给我的直观感受是 主要通过背景色块区分不同元素块，所以不太有棱角感和分界感，也给界面更多空余感，相对来说视觉上比较舒适。顶部或侧边导航可能是深色，但是位置在整个画面的边缘，占比适当就不会突兀。</p>
 <p>展示的组件基本上都是简约的风格，有一种让组件只表达自身功能而尽量节省其他装饰性作用的感觉。图标也是“尽量不说废话”的组件风格，但是相对其他组件而言会活泼一点。</p>
 <p>Antd 一些特有的功能组件：</p>
-<p>QRCode二维码：能够将文本转换生成二维码的组件，支持自定义配色和 Logo 配置，自 <a href="mailto:&#x61;&#110;&#116;&#x64;&#x40;&#x35;&#46;&#49;&#x2e;&#48;">&#x61;&#110;&#116;&#x64;&#x40;&#x35;&#46;&#49;&#x2e;&#48;</a> 版本开始提供该组件。</p>
+<p>QRCode二维码：能够将文本转换生成二维码的组件，支持自定义配色和 Logo 配置，自 <a href="mailto:&#97;&#x6e;&#x74;&#100;&#x40;&#x35;&#x2e;&#x31;&#x2e;&#48;">&#97;&#x6e;&#x74;&#100;&#x40;&#x35;&#x2e;&#x31;&#x2e;&#48;</a> 版本开始提供该组件。</p>
 <p>FloatButton悬浮按钮：用于网站上的全局功能，无论浏览到何处都可以看见的按钮。</p>
 <p>Watermark水印：给页面的某个区域加上水印，适用于防止信息盗用。</p>
 <h2 id="2-Element-Plus"><a href="#2-Element-Plus" class="headerlink" title="2. Element Plus"></a>2. Element Plus</h2><p>ELement Plus的首页很吸引我——随鼠标移动的界面展示图，很有立体感。这种感觉也体现在其组件里，设计者大概是细节控，边框圆角和投影的样式都有给用户设置可选项。</p>
@@ -290,6 +290,14 @@
 <p>Button样式比较可爱（很像糖果）。可以自定义按钮颜色，并自动计算 <code>hover</code> 和 <code>active</code> 触发后的颜色。</p>
 <p>Scrollbar用于替换浏览器原生滚动条。</p>
 <p>基本上应该有的组件都有，上手应该也比较容易。商务性质没有 Antd 那么明显，功能上会少一点，简约可用。</p>
+<h2 id="3-WeUI"><a href="#3-WeUI" class="headerlink" title="3. WeUI"></a>3. WeUI</h2><p>这是一套基于样式库<a target="_blank" rel="noopener" href="https://github.com/Tencent/weui-wxss/">weui-wxss</a>开发的小程序扩展组件库，同微信原生视觉体验一致的UI组件库。</p>
+<blockquote>
+<p>“微信内部已经有一套H5版本的WeUI样式库。综合考虑，我们基于WeUI样式库开发了小程序版本的UI组件库，在内部多个小程序项目已经使用OK的情况下，我们把这套组件库开源让外部开发者也可以使用。”</p>
+</blockquote>
+<p>可以看到，WeUI的定位是给小程序使用的UI模板。这里就要了解一下小程序是什么了~</p>
+<blockquote>
+<p>微信是中国使用量最大的手机 App 之一，2017年，微信正式推出了小程序，允许外部开发者在微信内部运行自己的代码，开展业务。小程序已经成为国内前端的一个重要业务，跟 Web 和手机 App 有着同等的重要性。</p>
+</blockquote>
 
     </div>
 
@@ -401,7 +409,7 @@
 
       <!--noindex-->
       <div class="post-toc-wrap sidebar-panel">
-          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#0-%E5%89%8D%E8%A8%80"><span class="nav-text">0.前言</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#1-Ant-Design"><span class="nav-text">1. Ant Design</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-Element-Plus"><span class="nav-text">2. Element Plus</span></a></li></ol></div>
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#0-%E5%89%8D%E8%A8%80"><span class="nav-text">0.前言</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#1-Ant-Design"><span class="nav-text">1. Ant Design</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-Element-Plus"><span class="nav-text">2. Element Plus</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#3-WeUI"><span class="nav-text">3. WeUI</span></a></li></ol></div>
       </div>
       <!--/noindex-->
 
