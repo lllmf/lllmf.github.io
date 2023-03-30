@@ -13,7 +13,7 @@
 <p>Antd 给我的直观感受是 主要通过背景色块区分不同元素块，所以不太有棱角感和分界感，也给界面更多空余感，相对来说视觉上比较舒适。顶部或侧边导航可能是深色，但是位置在整个画面的边缘，占比适当就不会突兀。</p>
 <p>展示的组件基本上都是简约的风格，有一种让组件只表达自身功能而尽量节省其他装饰性作用的感觉。图标也是“尽量不说废话”的组件风格，但是相对其他组件而言会活泼一点。</p>
 <p>Antd 一些特有的功能组件：</p>
-<p>QRCode二维码：能够将文本转换生成二维码的组件，支持自定义配色和 Logo 配置，自 <a href="mailto:&#97;&#x6e;&#x74;&#100;&#x40;&#x35;&#x2e;&#x31;&#x2e;&#48;">&#97;&#x6e;&#x74;&#100;&#x40;&#x35;&#x2e;&#x31;&#x2e;&#48;</a> 版本开始提供该组件。</p>
+<p>QRCode二维码：能够将文本转换生成二维码的组件，支持自定义配色和 Logo 配置，自 <a href="mailto:&#x61;&#110;&#116;&#x64;&#64;&#x35;&#x2e;&#x31;&#46;&#48;">&#x61;&#110;&#116;&#x64;&#64;&#x35;&#x2e;&#x31;&#46;&#48;</a> 版本开始提供该组件。</p>
 <p>FloatButton悬浮按钮：用于网站上的全局功能，无论浏览到何处都可以看见的按钮。</p>
 <p>Watermark水印：给页面的某个区域加上水印，适用于防止信息盗用。</p>
 <h2 id="2-Element-Plus"><a href="#2-Element-Plus" class="headerlink" title="2. Element Plus"></a>2. Element Plus</h2><p>ELement Plus的首页很吸引我——随鼠标移动的界面展示图，很有立体感。这种感觉也体现在其组件里，设计者大概是细节控，边框圆角和投影的样式都有给用户设置可选项。</p>
@@ -29,6 +29,130 @@
 <blockquote>
 <p>微信是中国使用量最大的手机 App 之一，2017年，微信正式推出了小程序，允许外部开发者在微信内部运行自己的代码，开展业务。小程序已经成为国内前端的一个重要业务，跟 Web 和手机 App 有着同等的重要性。</p>
 </blockquote>
+]]></content>
+      <categories>
+        <category>技术博客</category>
+      </categories>
+      <tags>
+        <tag>技术</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>React vs Vue</title>
+    <url>/2023/03/10/React-vs-Vue/</url>
+    <content><![CDATA[<h2 id="0-前言"><a href="#0-前言" class="headerlink" title="0. 前言"></a>0. 前言</h2><p>在之前做过的项目里，我采用的前端框架都是 React，但是当我在使用中搜索一些方法或者函数问题的时候，发现会出现很多 Vue 的帖子。这让我发现两者可能有很多相似点。</p>
+<p>本篇将横向比较两者的异同，主要目的是分析它们的受众。（适合初学者阅读，但不是指导性教程。）</p>
+<span id="more"></span>
+
+<h2 id="1-前端框架"><a href="#1-前端框架" class="headerlink" title="1. 前端框架"></a>1. 前端框架</h2><p>首先，我们要理解一个概念：前端框架。在前端开发的时候，我们需要使用HTML来对网页进行基本布局，使用CSS对网页样式进行修饰，使用JavaScript让网页实现互动化功能。所以呢，当你想要自主实现一个较为完善的网页时，你首先要学会这三种语言的用法（特别是能实现很多功能的JS）。不过我觉得一边实践一边学习是一个很好的方法，毕竟前端某种意义上也是所见即所得嘛。</p>
+<p>但是从零开始搭建一个美观的网页，对于熟手来说比较枯燥费力，对于新手来说则是难以轻易上手。如果将对很多类似问题的思考迁移过来，我们就会隐约感觉到前面那句话的解决方法——标准化。</p>
+<p>前端框架就是为Web开发人员提供可重用代码模块、标准化前端技术，从而提供通用结构和简化工作的工具。而对于新手来说，学习怎么使用这个工具可能是和学习语言一样重要的事情。</p>
+<p>前端框架主要用于组织网站应用程序的开发、功能以及交互性。前端框架一般都会自带很多开发工具，其中我比较感兴趣的部分应该会在之后的章节介绍。</p>
+<h2 id="2-框架介绍"><a href="#2-框架介绍" class="headerlink" title="2. 框架介绍"></a>2. 框架介绍</h2><p>此小节参考维基百科。</p>
+<p>目前最流行的前端框架是 React、Vue、Angular、Svelte、JQuery、Ember、Backbone、Semantic UI、Foundation 和 Preact。本文仅涉及前两者，如果我后面有尝试新的框架，也会考虑再写几篇来介绍。</p>
+<h3 id="React"><a href="#React" class="headerlink" title="React"></a>React</h3><p>React 也称为 React.js 或 ReactJS ，由<a href="https://zh.wikipedia.org/zh-cn/Meta_Platforms">Meta</a>（前身为<a href="https://zh.wikipedia.org/wiki/Facebook">Facebook</a>）和由个人开发者和公司组成的社群维护，是一个自由及开放源代码的前端 JavaScript 工具库，用于基于 UI 组件构建用户界面。</p>
+<p>React只专注状态管理和将状态渲染到DOM（文档对象模型，用一个逻辑树来表示一个文档，树的每个分支的终点都是一个节点 (node)，每个节点都包含着对象 (objects)），因此创建React应用程序通常需要使用额外的工具库来进行路由实现，以及某些客户端功能。</p>
+<p>React代码由称为<strong>组件</strong>的实体组成。这些组件是可重复利用的，并且必须遵循大写驼峰命名法（Pascal Case）作为其命名规则，也就是大写版本的驼峰式命名法（camelCase）在src文件夹中形成。</p>
+<p>其中，根据宣告组件的方式可以分为两类：函数组件，类别组件。下面是两个例子：</p>
+<ul>
+<li>函数组件，用一个函数声明，返回 JSX（是JavaScript语言语法的扩展）</li>
+</ul>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">/* A example */</span><br><span class="line">import React from &#x27;react&#x27;;</span><br><span class="line">const Example = () =&gt; &#123; /* 定义一个名为Example的React组件 */</span><br><span class="line">    return (</span><br><span class="line">        &lt;div className=&quot;hello_world&quot;&gt;</span><br><span class="line">            &lt;h1&gt;hello world!&lt;/h1&gt;</span><br><span class="line">        &lt;/div&gt;</span><br><span class="line">    );</span><br><span class="line">&#125;</span><br><span class="line">export default Example; /*将这个组件暴露出来，可以被其他文件引用*/</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>类别组件，使用ES6（ECMAScript 6，于2015年6月正式发布的JavaScript语言的标准）类声明，组件内容关于类别的使用和生命周期方法</li>
+</ul>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">/* A example */</span><br><span class="line">import React from &#x27;react&#x27;;</span><br><span class="line">class ParentComponent extends React.Component &#123;</span><br><span class="line">  state = &#123; color: &#x27;green&#x27; &#125;;</span><br><span class="line">  render() &#123;</span><br><span class="line">    return (</span><br><span class="line">      &lt;ChildComponent color=&#123;this.state.color&#125; /&gt;</span><br><span class="line">    );</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h3 id="Vue"><a href="#Vue" class="headerlink" title="Vue"></a>Vue</h3><p>Vue 也称为 Vue.js，是一个用于创建用户界面的开源<a href="https://zh.wikipedia.org/wiki/MVVM">MVVM</a>前端)JavaScript框架，也是一个创建单页应用的Web应用框架。Vue.js 由<a href="https://zh.wikipedia.org/wiki/%E5%B0%A4%E9%9B%A8%E6%BA%AA">尤雨溪</a>创建，由他和其他活跃的核心团队成员维护。（Vue 是 Github 上最受欢迎的开源项目之一。）</p>
+<ul>
+<li>组件，组件是基础HTML元素的拓展，可方便地自定义其数据与行为</li>
+<li>Vue 支持以<code>.vue</code>为扩展名的文件来定义一个完整组件，用以替代使用<code>Vue.component</code>注册组件的方式</li>
+</ul>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">// 定义一个名为 button-counter 的新组件</span><br><span class="line">Vue.component(&#x27;button-counter&#x27;, &#123;</span><br><span class="line">  data: function () &#123;</span><br><span class="line">    return &#123;</span><br><span class="line">      count: 0</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;,</span><br><span class="line">  template: &#x27;&lt;button v-on:click=&quot;count++&quot;&gt;我被点击了 &#123;&#123; count &#125;&#125; 次！&lt;/button&gt;&#x27;</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>响应式设计</li>
+</ul>
+<p>响应式指 MVC 模型中的视图随着模型变化而变化。在 Vue 中，开发者只需将视图与对应的模型进行绑定，Vue 便能自动观测模型的变动，并重绘视图。这一特性使得 Vue 的状态管理变得相当简单直观。</p>
+<h2 id="3-定位和建议"><a href="#3-定位和建议" class="headerlink" title="3. 定位和建议"></a>3. 定位和建议</h2><p>如果我是个熟手，那么写这篇文章应该会有更加充实、深入的内容吧。但可能也正因为我不太熟练，所以可以在更合适的位置代表很多人去大胆探索。</p>
+<p>对于学习一样工具，方法是很重要的。比如，当我第一次使用React 去开发网页时，因为急于实现脑子里设想的功能，总是想到一点就去搜一点。别人传到网上的资源确实不少，但是我发现有一个很大的问题是 React 会更新但很多博客不会。所以，我们最好从官方网页和社区入手，不用那么急地越过官方教程，也建议在找寻方法的时候回归源码去看看（这里就是开源项目的优点了）。</p>
+<p>当然，如果有人愿意带着你上手，应该是会容易很多。但是很多时候自学才是常态，而且在互联网上搜索到合适的指南同样会让学习变得容易很多。</p>
+<h2 id="4-沉浸式体验"><a href="#4-沉浸式体验" class="headerlink" title="4. 沉浸式体验"></a>4. 沉浸式体验</h2><p>我们用实践的方式来了解它们。</p>
+<h3 id="Vue-1"><a href="#Vue-1" class="headerlink" title="Vue"></a><a href="https://cn.vuejs.org/">Vue</a></h3><h4 id="01-准备"><a href="#01-准备" class="headerlink" title="01. 准备"></a>01. 准备</h4><p>当前版本是 Vue3 （Vue 2 将于 2023 年 12 月 31 日停止维护）。</p>
+<p>我们首先来看看<a href="https://cn.vuejs.org/guide/introduction.html">官方的深度指南</a>，对 Vue 有一个宏观的了解。Vue 是一个渐进式框架（我的理解是，可以根据自己的需求，在不同场合去使用它完成丰富的内容）。</p>
+<ul>
+<li><p>单文件组件（ <code>*.vue</code> 文件）</p>
+<ul>
+<li>将一个组件的逻辑 (JavaScript)，模板 (HTML) 和样式 (CSS) 封装在同一个文件里</li>
+</ul>
+</li>
+<li><p>组件书写风格</p>
+<ul>
+<li>选项式API，用包含多个选项的对象来描述组件的逻辑</li>
+<li>组合式API，使用导入的 API 函数来描述组件逻辑</li>
+</ul>
+</li>
+<li><p>响应式系统</p>
+<ul>
+<li>Vue 会自动跟踪 JavaScript 状态并在其发生变化时响应式地更新 DOM</li>
+</ul>
+</li>
+</ul>
+<h4 id="02-搭建"><a href="#02-搭建" class="headerlink" title="02. 搭建"></a>02. 搭建</h4><p>我已经安装过了Node.js，版本为 v18.14.2。在命令行输入下面的命令，安装并执行 create-vue（Vue官方的项目脚手架工具）。</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">npm init vue@latest</span><br></pre></td></tr></table></figure>
+
+<p>选择的可选选项：</p>
+<ul>
+<li>TypeScript</li>
+<li>Vue Router</li>
+<li>Pinia</li>
+<li>Vitest</li>
+</ul>
+<p>按引领完成项目创建后，在项目根目录执行命令：</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">npm install</span><br><span class="line">npm run dev</span><br></pre></td></tr></table></figure>
+
+<p>构建工具 <a href="https://cn.vitejs.dev/">Vite</a> 在上面的步骤默认安装好了。</p>
+<p>采用官方推荐的 IDE 配置：Visual Studio Code + Volar 扩展。</p>
+<p>ps: 上面的命令<code>npm run dev</code>意思是在开发环境运行，如果想在生产环境运行输入<code>npm run build</code>。（开发环境有提示体验的功能，产生性能开销。所以当部署到生产环境中时，应该移除所有未使用的、仅用于开发环境的代码分支，来获得更小的包体积和更好的性能。）</p>
+<p>ps： <code>bash: vue: command not found</code> 的问题，原因是不是全局安装vue。</p>
+<h4 id="03-组件库"><a href="#03-组件库" class="headerlink" title="03. 组件库"></a>03. 组件库</h4><p>注意 Vue3 项目使用新版的 Element Plus（Vue2 对应的是Element UI）。在项目根目录输入下面的指令：</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">npm install element-plus --save</span><br></pre></td></tr></table></figure>
+
+<p>如果对打包后文件的大小不在乎，可以使用<strong>完整导入</strong>。</p>
+<figure class="highlight tsx"><table><tr><td class="code"><pre><span class="line"><span class="comment">// main.ts</span></span><br><span class="line"><span class="keyword">import</span> &#123; createApp &#125; <span class="keyword">from</span> <span class="string">&#x27;vue&#x27;</span></span><br><span class="line"><span class="keyword">import</span> <span class="title class_">ElementPlus</span> <span class="keyword">from</span> <span class="string">&#x27;element-plus&#x27;</span></span><br><span class="line"><span class="keyword">import</span> <span class="string">&#x27;element-plus/dist/index.css&#x27;</span></span><br><span class="line"><span class="keyword">import</span> <span class="title class_">App</span> <span class="keyword">from</span> <span class="string">&#x27;./App.vue&#x27;</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">const</span> app = <span class="title function_">createApp</span>(<span class="title class_">App</span>)</span><br><span class="line"></span><br><span class="line">app.<span class="title function_">use</span>(<span class="title class_">ElementPlus</span>)</span><br><span class="line">app.<span class="title function_">mount</span>(<span class="string">&#x27;#app&#x27;</span>)</span><br></pre></td></tr></table></figure>
+
+<p>但我觉得<strong>按需导入</strong>可能更好：</p>
+<p>首先，需要安装<code>unplugin-vue-components</code> 和 <code>unplugin-auto-import</code>这两款插件。</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">npm install -D unplugin-vue-components unplugin-auto-import</span><br></pre></td></tr></table></figure>
+
+<p>然后把下列代码插入到你的 <code>Vite</code> 的配置文件中：</p>
+<figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="comment">// vite.config.js</span></span><br><span class="line"><span class="keyword">import</span> &#123; defineConfig &#125; <span class="keyword">from</span> <span class="string">&#x27;vite&#x27;</span></span><br><span class="line"><span class="keyword">import</span> <span class="title class_">AutoImport</span> <span class="keyword">from</span> <span class="string">&#x27;unplugin-auto-import/vite&#x27;</span></span><br><span class="line"><span class="keyword">import</span> <span class="title class_">Components</span> <span class="keyword">from</span> <span class="string">&#x27;unplugin-vue-components/vite&#x27;</span></span><br><span class="line"><span class="keyword">import</span> &#123; <span class="title class_">ElementPlusResolver</span> &#125; <span class="keyword">from</span> <span class="string">&#x27;unplugin-vue-components/resolvers&#x27;</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">export</span> <span class="keyword">default</span> <span class="title function_">defineConfig</span>(&#123;</span><br><span class="line">  <span class="comment">// ...</span></span><br><span class="line">  <span class="attr">plugins</span>: [</span><br><span class="line">    <span class="comment">// ...</span></span><br><span class="line">    <span class="title class_">AutoImport</span>(&#123;</span><br><span class="line">      <span class="attr">resolvers</span>: [<span class="title class_">ElementPlusResolver</span>()],</span><br><span class="line">    &#125;),</span><br><span class="line">    <span class="title class_">Components</span>(&#123;</span><br><span class="line">      <span class="attr">resolvers</span>: [<span class="title class_">ElementPlusResolver</span>()],</span><br><span class="line">    &#125;),</span><br><span class="line">  ],</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
+
+<p>ps：安装Vue Router</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">npm install vue-router@4</span><br></pre></td></tr></table></figure>
+
+<h4 id="04-立项"><a href="#04-立项" class="headerlink" title="04. 立项"></a>04. 立项</h4><p>既然决定通过实践了解Vue，那我就要选定一个项目内容了。我第一次接触前端知识的大气污染可视化项目，主要是通过在HTML页面中使用 jQuery 库实现数据渲染等，没有使用前端框架。于是这次我准备在Vue框架下，重新实现之前做的这个项目，最终可能会对界面效果进行比较分析。</p>
+<h4 id="05-上手"><a href="#05-上手" class="headerlink" title="05. 上手"></a>05. 上手</h4><p>预期的组件树长这样：</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">App (root component)</span><br><span class="line">|- Visualization</span><br><span class="line">	|- InputTime</span><br><span class="line">	|- Charts</span><br><span class="line">	|- MyBar</span><br></pre></td></tr></table></figure>
+
+<p>多个视图所使用的状态数据是一致的，所以需要在多个组件实例间共享，因此选择用 <code>reactive()</code> 来创建一个响应式对象，并将它导入到多个组件中。</p>
+<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="comment">// store.js</span></span><br><span class="line"><span class="keyword">import</span> &#123; reactive &#125; <span class="keyword">from</span> <span class="string">&#x27;vue&#x27;</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">export</span> <span class="keyword">const</span> store = <span class="title function_">reactive</span>(&#123;</span><br><span class="line">  <span class="attr">count</span>: <span class="number">0</span></span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
+
+<p>——以下为完成代码后的文字记录：</p>
+<p>实际上组件结构：</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">App (root component)</span><br><span class="line">|- assets</span><br><span class="line">	|- datas</span><br><span class="line">	|- css文件</span><br><span class="line">	|- images</span><br><span class="line">|- components</span><br><span class="line">	|- header.vue //头部组件</span><br><span class="line">	|- sidebar	//侧边栏组件</span><br><span class="line">|- router //管理路由</span><br><span class="line">|- stores</span><br><span class="line">	|- 储存可视化数据文件、侧边栏数据文件</span><br><span class="line">|- views</span><br><span class="line">	|- dashboard.vue //系统主页</span><br><span class="line">	|- 各种图表视图</span><br><span class="line">	|- 引入地图</span><br></pre></td></tr></table></figure>
+
+<p>我重新创建了一个TS版本的vue项目，发现比起直接创建的JS版本的文件夹，格式会更有条理。</p>
+<p>即上文提到的，在创建vue项目时选择了以下可选选项：</p>
+<ul>
+<li>TypeScript</li>
+<li>Vue Router</li>
+<li>Pinia</li>
+<li>Vitest</li>
+</ul>
+<p>过程中比较麻烦的地方有，高德地图和ECharts没有提供Vue版本的可参考文件。在Vue上面使用它们，在HTML网页中使用还是有比较大的区别的。</p>
+<p>另外我还在探索提供VueUse给项目添加暗黑模式。目前是已经加上了按钮，实现部分元素的切换，但是右侧内容的背景等部分未渲染。</p>
 ]]></content>
       <categories>
         <category>技术博客</category>
@@ -221,130 +345,6 @@
       </categories>
       <tags>
         <tag>理论</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>React vs Vue</title>
-    <url>/2023/03/10/React-vs-Vue/</url>
-    <content><![CDATA[<h2 id="0-前言"><a href="#0-前言" class="headerlink" title="0. 前言"></a>0. 前言</h2><p>在之前做过的项目里，我采用的前端框架都是 React，但是当我在使用中搜索一些方法或者函数问题的时候，发现会出现很多 Vue 的帖子。这让我发现两者可能有很多相似点。</p>
-<p>本篇将横向比较两者的异同，主要目的是分析它们的受众。（适合初学者阅读，但不是指导性教程。）</p>
-<span id="more"></span>
-
-<h2 id="1-前端框架"><a href="#1-前端框架" class="headerlink" title="1. 前端框架"></a>1. 前端框架</h2><p>首先，我们要理解一个概念：前端框架。在前端开发的时候，我们需要使用HTML来对网页进行基本布局，使用CSS对网页样式进行修饰，使用JavaScript让网页实现互动化功能。所以呢，当你想要自主实现一个较为完善的网页时，你首先要学会这三种语言的用法（特别是能实现很多功能的JS）。不过我觉得一边实践一边学习是一个很好的方法，毕竟前端某种意义上也是所见即所得嘛。</p>
-<p>但是从零开始搭建一个美观的网页，对于熟手来说比较枯燥费力，对于新手来说则是难以轻易上手。如果将对很多类似问题的思考迁移过来，我们就会隐约感觉到前面那句话的解决方法——标准化。</p>
-<p>前端框架就是为Web开发人员提供可重用代码模块、标准化前端技术，从而提供通用结构和简化工作的工具。而对于新手来说，学习怎么使用这个工具可能是和学习语言一样重要的事情。</p>
-<p>前端框架主要用于组织网站应用程序的开发、功能以及交互性。前端框架一般都会自带很多开发工具，其中我比较感兴趣的部分应该会在之后的章节介绍。</p>
-<h2 id="2-框架介绍"><a href="#2-框架介绍" class="headerlink" title="2. 框架介绍"></a>2. 框架介绍</h2><p>此小节参考维基百科。</p>
-<p>目前最流行的前端框架是 React、Vue、Angular、Svelte、JQuery、Ember、Backbone、Semantic UI、Foundation 和 Preact。本文仅涉及前两者，如果我后面有尝试新的框架，也会考虑再写几篇来介绍。</p>
-<h3 id="React"><a href="#React" class="headerlink" title="React"></a>React</h3><p>React 也称为 React.js 或 ReactJS ，由<a href="https://zh.wikipedia.org/zh-cn/Meta_Platforms">Meta</a>（前身为<a href="https://zh.wikipedia.org/wiki/Facebook">Facebook</a>）和由个人开发者和公司组成的社群维护，是一个自由及开放源代码的前端 JavaScript 工具库，用于基于 UI 组件构建用户界面。</p>
-<p>React只专注状态管理和将状态渲染到DOM（文档对象模型，用一个逻辑树来表示一个文档，树的每个分支的终点都是一个节点 (node)，每个节点都包含着对象 (objects)），因此创建React应用程序通常需要使用额外的工具库来进行路由实现，以及某些客户端功能。</p>
-<p>React代码由称为<strong>组件</strong>的实体组成。这些组件是可重复利用的，并且必须遵循大写驼峰命名法（Pascal Case）作为其命名规则，也就是大写版本的驼峰式命名法（camelCase）在src文件夹中形成。</p>
-<p>其中，根据宣告组件的方式可以分为两类：函数组件，类别组件。下面是两个例子：</p>
-<ul>
-<li>函数组件，用一个函数声明，返回 JSX（是JavaScript语言语法的扩展）</li>
-</ul>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">/* A example */</span><br><span class="line">import React from &#x27;react&#x27;;</span><br><span class="line">const Example = () =&gt; &#123; /* 定义一个名为Example的React组件 */</span><br><span class="line">    return (</span><br><span class="line">        &lt;div className=&quot;hello_world&quot;&gt;</span><br><span class="line">            &lt;h1&gt;hello world!&lt;/h1&gt;</span><br><span class="line">        &lt;/div&gt;</span><br><span class="line">    );</span><br><span class="line">&#125;</span><br><span class="line">export default Example; /*将这个组件暴露出来，可以被其他文件引用*/</span><br></pre></td></tr></table></figure>
-
-<ul>
-<li>类别组件，使用ES6（ECMAScript 6，于2015年6月正式发布的JavaScript语言的标准）类声明，组件内容关于类别的使用和生命周期方法</li>
-</ul>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">/* A example */</span><br><span class="line">import React from &#x27;react&#x27;;</span><br><span class="line">class ParentComponent extends React.Component &#123;</span><br><span class="line">  state = &#123; color: &#x27;green&#x27; &#125;;</span><br><span class="line">  render() &#123;</span><br><span class="line">    return (</span><br><span class="line">      &lt;ChildComponent color=&#123;this.state.color&#125; /&gt;</span><br><span class="line">    );</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<h3 id="Vue"><a href="#Vue" class="headerlink" title="Vue"></a>Vue</h3><p>Vue 也称为 Vue.js，是一个用于创建用户界面的开源<a href="https://zh.wikipedia.org/wiki/MVVM">MVVM</a>前端)JavaScript框架，也是一个创建单页应用的Web应用框架。Vue.js 由<a href="https://zh.wikipedia.org/wiki/%E5%B0%A4%E9%9B%A8%E6%BA%AA">尤雨溪</a>创建，由他和其他活跃的核心团队成员维护。（Vue 是 Github 上最受欢迎的开源项目之一。）</p>
-<ul>
-<li>组件，组件是基础HTML元素的拓展，可方便地自定义其数据与行为</li>
-<li>Vue 支持以<code>.vue</code>为扩展名的文件来定义一个完整组件，用以替代使用<code>Vue.component</code>注册组件的方式</li>
-</ul>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">// 定义一个名为 button-counter 的新组件</span><br><span class="line">Vue.component(&#x27;button-counter&#x27;, &#123;</span><br><span class="line">  data: function () &#123;</span><br><span class="line">    return &#123;</span><br><span class="line">      count: 0</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;,</span><br><span class="line">  template: &#x27;&lt;button v-on:click=&quot;count++&quot;&gt;我被点击了 &#123;&#123; count &#125;&#125; 次！&lt;/button&gt;&#x27;</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
-
-<ul>
-<li>响应式设计</li>
-</ul>
-<p>响应式指 MVC 模型中的视图随着模型变化而变化。在 Vue 中，开发者只需将视图与对应的模型进行绑定，Vue 便能自动观测模型的变动，并重绘视图。这一特性使得 Vue 的状态管理变得相当简单直观。</p>
-<h2 id="3-定位和建议"><a href="#3-定位和建议" class="headerlink" title="3. 定位和建议"></a>3. 定位和建议</h2><p>如果我是个熟手，那么写这篇文章应该会有更加充实、深入的内容吧。但可能也正因为我不太熟练，所以可以在更合适的位置代表很多人去大胆探索。</p>
-<p>对于学习一样工具，方法是很重要的。比如，当我第一次使用React 去开发网页时，因为急于实现脑子里设想的功能，总是想到一点就去搜一点。别人传到网上的资源确实不少，但是我发现有一个很大的问题是 React 会更新但很多博客不会。所以，我们最好从官方网页和社区入手，不用那么急地越过官方教程，也建议在找寻方法的时候回归源码去看看（这里就是开源项目的优点了）。</p>
-<p>当然，如果有人愿意带着你上手，应该是会容易很多。但是很多时候自学才是常态，而且在互联网上搜索到合适的指南同样会让学习变得容易很多。</p>
-<h2 id="4-沉浸式体验"><a href="#4-沉浸式体验" class="headerlink" title="4. 沉浸式体验"></a>4. 沉浸式体验</h2><p>我们用实践的方式来了解它们。</p>
-<h3 id="Vue-1"><a href="#Vue-1" class="headerlink" title="Vue"></a><a href="https://cn.vuejs.org/">Vue</a></h3><h4 id="01-准备"><a href="#01-准备" class="headerlink" title="01. 准备"></a>01. 准备</h4><p>当前版本是 Vue3 （Vue 2 将于 2023 年 12 月 31 日停止维护）。</p>
-<p>我们首先来看看<a href="https://cn.vuejs.org/guide/introduction.html">官方的深度指南</a>，对 Vue 有一个宏观的了解。Vue 是一个渐进式框架（我的理解是，可以根据自己的需求，在不同场合去使用它完成丰富的内容）。</p>
-<ul>
-<li><p>单文件组件（ <code>*.vue</code> 文件）</p>
-<ul>
-<li>将一个组件的逻辑 (JavaScript)，模板 (HTML) 和样式 (CSS) 封装在同一个文件里</li>
-</ul>
-</li>
-<li><p>组件书写风格</p>
-<ul>
-<li>选项式API，用包含多个选项的对象来描述组件的逻辑</li>
-<li>组合式API，使用导入的 API 函数来描述组件逻辑</li>
-</ul>
-</li>
-<li><p>响应式系统</p>
-<ul>
-<li>Vue 会自动跟踪 JavaScript 状态并在其发生变化时响应式地更新 DOM</li>
-</ul>
-</li>
-</ul>
-<h4 id="02-搭建"><a href="#02-搭建" class="headerlink" title="02. 搭建"></a>02. 搭建</h4><p>我已经安装过了Node.js，版本为 v18.14.2。在命令行输入下面的命令，安装并执行 create-vue（Vue官方的项目脚手架工具）。</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">npm init vue@latest</span><br></pre></td></tr></table></figure>
-
-<p>选择的可选选项：</p>
-<ul>
-<li>TypeScript</li>
-<li>Vue Router</li>
-<li>Pinia</li>
-<li>Vitest</li>
-</ul>
-<p>按引领完成项目创建后，在项目根目录执行命令：</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">npm install</span><br><span class="line">npm run dev</span><br></pre></td></tr></table></figure>
-
-<p>构建工具 <a href="https://cn.vitejs.dev/">Vite</a> 在上面的步骤默认安装好了。</p>
-<p>采用官方推荐的 IDE 配置：Visual Studio Code + Volar 扩展。</p>
-<p>ps: 上面的命令<code>npm run dev</code>意思是在开发环境运行，如果想在生产环境运行输入<code>npm run build</code>。（开发环境有提示体验的功能，产生性能开销。所以当部署到生产环境中时，应该移除所有未使用的、仅用于开发环境的代码分支，来获得更小的包体积和更好的性能。）</p>
-<p>ps： <code>bash: vue: command not found</code> 的问题，原因是不是全局安装vue。</p>
-<h4 id="03-组件库"><a href="#03-组件库" class="headerlink" title="03. 组件库"></a>03. 组件库</h4><p>注意 Vue3 项目使用新版的 Element Plus（Vue2 对应的是Element UI）。在项目根目录输入下面的指令：</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">npm install element-plus --save</span><br></pre></td></tr></table></figure>
-
-<p>如果对打包后文件的大小不在乎，可以使用<strong>完整导入</strong>。</p>
-<figure class="highlight tsx"><table><tr><td class="code"><pre><span class="line"><span class="comment">// main.ts</span></span><br><span class="line"><span class="keyword">import</span> &#123; createApp &#125; <span class="keyword">from</span> <span class="string">&#x27;vue&#x27;</span></span><br><span class="line"><span class="keyword">import</span> <span class="title class_">ElementPlus</span> <span class="keyword">from</span> <span class="string">&#x27;element-plus&#x27;</span></span><br><span class="line"><span class="keyword">import</span> <span class="string">&#x27;element-plus/dist/index.css&#x27;</span></span><br><span class="line"><span class="keyword">import</span> <span class="title class_">App</span> <span class="keyword">from</span> <span class="string">&#x27;./App.vue&#x27;</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">const</span> app = <span class="title function_">createApp</span>(<span class="title class_">App</span>)</span><br><span class="line"></span><br><span class="line">app.<span class="title function_">use</span>(<span class="title class_">ElementPlus</span>)</span><br><span class="line">app.<span class="title function_">mount</span>(<span class="string">&#x27;#app&#x27;</span>)</span><br></pre></td></tr></table></figure>
-
-<p>但我觉得<strong>按需导入</strong>可能更好：</p>
-<p>首先，需要安装<code>unplugin-vue-components</code> 和 <code>unplugin-auto-import</code>这两款插件。</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">npm install -D unplugin-vue-components unplugin-auto-import</span><br></pre></td></tr></table></figure>
-
-<p>然后把下列代码插入到你的 <code>Vite</code> 的配置文件中：</p>
-<figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="comment">// vite.config.js</span></span><br><span class="line"><span class="keyword">import</span> &#123; defineConfig &#125; <span class="keyword">from</span> <span class="string">&#x27;vite&#x27;</span></span><br><span class="line"><span class="keyword">import</span> <span class="title class_">AutoImport</span> <span class="keyword">from</span> <span class="string">&#x27;unplugin-auto-import/vite&#x27;</span></span><br><span class="line"><span class="keyword">import</span> <span class="title class_">Components</span> <span class="keyword">from</span> <span class="string">&#x27;unplugin-vue-components/vite&#x27;</span></span><br><span class="line"><span class="keyword">import</span> &#123; <span class="title class_">ElementPlusResolver</span> &#125; <span class="keyword">from</span> <span class="string">&#x27;unplugin-vue-components/resolvers&#x27;</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">export</span> <span class="keyword">default</span> <span class="title function_">defineConfig</span>(&#123;</span><br><span class="line">  <span class="comment">// ...</span></span><br><span class="line">  <span class="attr">plugins</span>: [</span><br><span class="line">    <span class="comment">// ...</span></span><br><span class="line">    <span class="title class_">AutoImport</span>(&#123;</span><br><span class="line">      <span class="attr">resolvers</span>: [<span class="title class_">ElementPlusResolver</span>()],</span><br><span class="line">    &#125;),</span><br><span class="line">    <span class="title class_">Components</span>(&#123;</span><br><span class="line">      <span class="attr">resolvers</span>: [<span class="title class_">ElementPlusResolver</span>()],</span><br><span class="line">    &#125;),</span><br><span class="line">  ],</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
-
-<p>ps：安装Vue Router</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">npm install vue-router@4</span><br></pre></td></tr></table></figure>
-
-<h4 id="04-立项"><a href="#04-立项" class="headerlink" title="04. 立项"></a>04. 立项</h4><p>既然决定通过实践了解Vue，那我就要选定一个项目内容了。我第一次接触前端知识的大气污染可视化项目，主要是通过在HTML页面中使用 jQuery 库实现数据渲染等，没有使用前端框架。于是这次我准备在Vue框架下，重新实现之前做的这个项目，最终可能会对界面效果进行比较分析。</p>
-<h4 id="05-上手"><a href="#05-上手" class="headerlink" title="05. 上手"></a>05. 上手</h4><p>预期的组件树长这样：</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">App (root component)</span><br><span class="line">|- Visualization</span><br><span class="line">	|- InputTime</span><br><span class="line">	|- Charts</span><br><span class="line">	|- MyBar</span><br></pre></td></tr></table></figure>
-
-<p>多个视图所使用的状态数据是一致的，所以需要在多个组件实例间共享，因此选择用 <code>reactive()</code> 来创建一个响应式对象，并将它导入到多个组件中。</p>
-<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="comment">// store.js</span></span><br><span class="line"><span class="keyword">import</span> &#123; reactive &#125; <span class="keyword">from</span> <span class="string">&#x27;vue&#x27;</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">export</span> <span class="keyword">const</span> store = <span class="title function_">reactive</span>(&#123;</span><br><span class="line">  <span class="attr">count</span>: <span class="number">0</span></span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
-
-<p>——以下为完成代码后的文字记录：</p>
-<p>实际上组件结构：</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">App (root component)</span><br><span class="line">|- assets</span><br><span class="line">	|- datas</span><br><span class="line">	|- css文件</span><br><span class="line">	|- images</span><br><span class="line">|- components</span><br><span class="line">	|- header.vue //头部组件</span><br><span class="line">	|- sidebar	//侧边栏组件</span><br><span class="line">|- router //管理路由</span><br><span class="line">|- stores</span><br><span class="line">	|- 储存可视化数据文件、侧边栏数据文件</span><br><span class="line">|- views</span><br><span class="line">	|- dashboard.vue //系统主页</span><br><span class="line">	|- 各种图表视图</span><br><span class="line">	|- 引入地图</span><br></pre></td></tr></table></figure>
-
-<p>我重新创建了一个TS版本的vue项目，发现比起直接创建的JS版本的文件夹，格式会更有条理。</p>
-<p>即上文提到的，在创建vue项目时选择了以下可选选项：</p>
-<ul>
-<li>TypeScript</li>
-<li>Vue Router</li>
-<li>Pinia</li>
-<li>Vitest</li>
-</ul>
-<p>过程中比较麻烦的地方有，高德地图和ECharts没有提供Vue版本的可参考文件。在Vue上面使用它们，在HTML网页中使用还是有比较大的区别的。</p>
-<p>另外我还在探索提供VueUse给项目添加暗黑模式。目前是已经加上了按钮，实现部分元素的切换，但是右侧内容的背景等部分未渲染。</p>
-]]></content>
-      <categories>
-        <category>技术博客</category>
-      </categories>
-      <tags>
-        <tag>技术</tag>
       </tags>
   </entry>
   <entry>
