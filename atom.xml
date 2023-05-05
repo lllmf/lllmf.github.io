@@ -6,7 +6,7 @@
   <link href="https://lllmf.github.io/atom.xml" rel="self"/>
   
   <link href="https://lllmf.github.io/"/>
-  <updated>2023-05-05T13:04:58.618Z</updated>
+  <updated>2023-05-05T13:47:59.195Z</updated>
   <id>https://lllmf.github.io/</id>
   
   <author>
@@ -17,17 +17,34 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>web-security</title>
+    <link href="https://lllmf.github.io/2023/05/05/web-security/"/>
+    <id>https://lllmf.github.io/2023/05/05/web-security/</id>
+    <published>2023-05-05T13:17:09.000Z</published>
+    <updated>2023-05-05T13:47:59.195Z</updated>
+    
+    
+    <summary type="html">&lt;h2 id=&quot;0-前言&quot;&gt;&lt;a href=&quot;#0-前言&quot; class=&quot;headerlink&quot; title=&quot;0. 前言&quot;&gt;&lt;/a&gt;0. 前言&lt;/h2&gt;&lt;p&gt;本篇内容是对前端web安全知识的学习，了解常遇到的前端攻击及防范方法。&lt;/p&gt;</summary>
+    
+    
+    
+    <category term="技术博客" scheme="https://lllmf.github.io/categories/%E6%8A%80%E6%9C%AF%E5%8D%9A%E5%AE%A2/"/>
+    
+    
+    <category term="技术" scheme="https://lllmf.github.io/tags/%E6%8A%80%E6%9C%AF/"/>
+    
+  </entry>
+  
+  <entry>
     <title>碎碎念</title>
     <link href="https://lllmf.github.io/2023/05/05/mff1/"/>
     <id>https://lllmf.github.io/2023/05/05/mff1/</id>
     <published>2023-05-05T12:52:22.000Z</published>
-    <updated>2023-05-05T13:04:58.618Z</updated>
+    <updated>2023-05-05T13:24:51.524Z</updated>
     
     
     <summary type="html">&lt;blockquote&gt;
-&lt;p&gt;我喜欢在寝室第一个起床&lt;br&gt;拉开蓝色的窗帘&lt;br&gt;再推开关了一夜的门&lt;br&gt;被每天都不一样的风触碰一下的感觉&lt;/p&gt;
-&lt;p&gt;也喜欢在椅子上坐着&lt;br&gt;抱着膝盖 一口口地喝水&lt;/p&gt;
-&lt;/blockquote&gt;</summary>
+&lt;p&gt;我喜欢在寝室第一个起床&lt;br&gt;拉开蓝色的窗帘&lt;br&gt;再推开关了一夜的门&lt;br&gt;被每天都不一样的风触碰一下的感觉&lt;/p&gt;</summary>
     
     
     

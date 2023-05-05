@@ -2,14 +2,25 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://lllmf.github.io/2023/05/05/web-security/</loc>
+    
+    <lastmod>2023-05-05T13:47:59.195Z</lastmod>
+    
+    <date>1683292629000</date>
+    <title>web-security | 阿菲的……</title>
+    
+    <desc>0. 前言本篇内容是对前端web安全知识的学习，了解常遇到的前端攻击及防范方法。</desc>
+  </url>
+  
+  <url>
     <loc>https://lllmf.github.io/2023/05/05/mff1/</loc>
     
-    <lastmod>2023-05-05T13:04:58.618Z</lastmod>
+    <lastmod>2023-05-05T13:24:51.524Z</lastmod>
     
     <date>1683291142000</date>
     <title>碎碎念 | 阿菲的……</title>
     
-    <desc>我喜欢在寝室第一个起床拉开蓝色的窗帘再推开关了一夜的门被每天都不一样的风触碰一下的感觉 也喜欢在椅子上坐着抱着膝盖 一口口地喝水</desc>
+    <desc>我喜欢在寝室第一个起床拉开蓝色的窗帘再推开关了一夜的门被每天都不一样的风触碰一下的感觉</desc>
   </url>
   
   <url>
