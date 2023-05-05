@@ -6,7 +6,7 @@
   <link href="https://lllmf.github.io/atom.xml" rel="self"/>
   
   <link href="https://lllmf.github.io/"/>
-  <updated>2023-03-30T15:19:22.587Z</updated>
+  <updated>2023-05-05T12:56:55.470Z</updated>
   <id>https://lllmf.github.io/</id>
   
   <author>
@@ -17,11 +17,38 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>碎碎念</title>
+    <link href="https://lllmf.github.io/2023/05/05/mff1/"/>
+    <id>https://lllmf.github.io/2023/05/05/mff1/</id>
+    <published>2023-05-05T12:52:22.000Z</published>
+    <updated>2023-05-05T12:56:55.470Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;blockquote&gt;
+&lt;p&gt;我喜欢在寝室第一个起床&lt;br&gt;拉开蓝色的窗帘&lt;br&gt;再推开关了一夜的门&lt;br&gt;被每天都不一样的风触碰一下的感觉&lt;/p&gt;
+&lt;p&gt;也喜欢在椅子上坐着&lt;br&gt;抱着膝盖</summary>
+        
+      
+    
+    
+    
+    <category term="碎碎念" scheme="https://lllmf.github.io/categories/%E7%A2%8E%E7%A2%8E%E5%BF%B5/"/>
+    
+    
+    <category term="杂记" scheme="https://lllmf.github.io/tags/%E6%9D%82%E8%AE%B0/"/>
+    
+  </entry>
+  
+  <entry>
     <title>组件库盘点</title>
     <link href="https://lllmf.github.io/2023/03/17/Component-Library/"/>
     <id>https://lllmf.github.io/2023/03/17/Component-Library/</id>
     <published>2023-03-17T15:18:37.000Z</published>
-    <updated>2023-03-30T15:19:22.587Z</updated>
+    <updated>2023-05-05T12:57:19.004Z</updated>
     
     
     <summary type="html">&lt;h2 id=&quot;0-前言&quot;&gt;&lt;a href=&quot;#0-前言&quot; class=&quot;headerlink&quot; title=&quot;0.前言&quot;&gt;&lt;/a&gt;0.前言&lt;/h2&gt;&lt;p&gt;本篇将简要盘点一些使用过或者感兴趣的 UI 组件库，包括Ant Design，Element Plus，Semi Design，WeUI。希望能独立辨析它们各自的风格和优势，可能也会学习一下实现代码，相当于是一篇学习记录和使用笔记~&lt;/p&gt;
@@ -100,7 +127,7 @@
     <link href="https://lllmf.github.io/2022/03/07/hello-world/"/>
     <id>https://lllmf.github.io/2022/03/07/hello-world/</id>
     <published>2022-03-07T10:15:12.000Z</published>
-    <updated>2023-03-30T15:47:00.161Z</updated>
+    <updated>2023-03-30T16:08:54.411Z</updated>
     
     
     <summary type="html">&lt;h2 id=&quot;0-前言&quot;&gt;&lt;a href=&quot;#0-前言&quot; class=&quot;headerlink&quot; title=&quot;0. 前言&quot;&gt;&lt;/a&gt;0. 前言&lt;/h2&gt;&lt;p&gt;mff开始搭建自己的技术博客啦（划掉）。&lt;/p&gt;
