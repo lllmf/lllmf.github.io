@@ -6,7 +6,7 @@
   <link href="https://lllmf.github.io/atom.xml" rel="self"/>
   
   <link href="https://lllmf.github.io/"/>
-  <updated>2023-05-05T13:47:59.195Z</updated>
+  <updated>2023-05-05T13:49:31.995Z</updated>
   <id>https://lllmf.github.io/</id>
   
   <author>
@@ -17,11 +17,11 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
-    <title>web-security</title>
+    <title>网络安全知识</title>
     <link href="https://lllmf.github.io/2023/05/05/web-security/"/>
     <id>https://lllmf.github.io/2023/05/05/web-security/</id>
     <published>2023-05-05T13:17:09.000Z</published>
-    <updated>2023-05-05T13:47:59.195Z</updated>
+    <updated>2023-05-05T13:49:31.995Z</updated>
     
     
     <summary type="html">&lt;h2 id=&quot;0-前言&quot;&gt;&lt;a href=&quot;#0-前言&quot; class=&quot;headerlink&quot; title=&quot;0. 前言&quot;&gt;&lt;/a&gt;0. 前言&lt;/h2&gt;&lt;p&gt;本篇内容是对前端web安全知识的学习，了解常遇到的前端攻击及防范方法。&lt;/p&gt;</summary>

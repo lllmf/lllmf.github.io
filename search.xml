@@ -495,7 +495,7 @@
       </tags>
   </entry>
   <entry>
-    <title>web-security</title>
+    <title>网络安全知识</title>
     <url>/2023/05/05/web-security/</url>
     <content><![CDATA[<h2 id="0-前言"><a href="#0-前言" class="headerlink" title="0. 前言"></a>0. 前言</h2><p>本篇内容是对前端web安全知识的学习，了解常遇到的前端攻击及防范方法。</p>
 <span id="more"></span>
