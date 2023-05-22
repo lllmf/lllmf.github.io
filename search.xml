@@ -68,7 +68,7 @@
 </ul>
 <figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">/* A example */</span><br><span class="line">import React from &#x27;react&#x27;;</span><br><span class="line">class ParentComponent extends React.Component &#123;</span><br><span class="line">  state = &#123; color: &#x27;green&#x27; &#125;;</span><br><span class="line">  render() &#123;</span><br><span class="line">    return (</span><br><span class="line">      &lt;ChildComponent color=&#123;this.state.color&#125; /&gt;</span><br><span class="line">    );</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
-<h3 id="Vue"><a href="#Vue" class="headerlink" title="Vue"></a>Vue</h3><p>Vue 也称为 Vue.js，是一个用于创建用户界面的开源<a href="https://zh.wikipedia.org/wiki/MVVM">MVVM</a>前端)JavaScript框架，也是一个创建单页应用的Web应用框架。Vue.js 由<a href="https://zh.wikipedia.org/wiki/%E5%B0%A4%E9%9B%A8%E6%BA%AA">尤雨溪</a>创建，由他和其他活跃的核心团队成员维护。（Vue 是 Github 上最受欢迎的开源项目之一。）</p>
+<h3 id="Vue"><a href="#Vue" class="headerlink" title="Vue"></a>Vue</h3><p>Vue 也称为 Vue.js，是一个用于创建用户界面的开源<a href="https://zh.wikipedia.org/wiki/MVVM">MVVM</a>前端的JavaScript 框架，也是一个创建单页应用的Web应用框架。Vue.js 由<a href="https://zh.wikipedia.org/wiki/%E5%B0%A4%E9%9B%A8%E6%BA%AA">尤雨溪</a>创建，由他和其他活跃的核心团队成员维护。（Vue 是 Github 上最受欢迎的开源项目之一。）</p>
 <ul>
 <li>组件，组件是基础HTML元素的拓展，可方便地自定义其数据与行为</li>
 <li>Vue 支持以<code>.vue</code>为扩展名的文件来定义一个完整组件，用以替代使用<code>Vue.component</code>注册组件的方式</li>
@@ -93,8 +93,8 @@
 </li>
 <li><p>组件书写风格</p>
 <ul>
-<li>选项式API，用包含多个选项的对象来描述组件的逻辑</li>
-<li>组合式API，使用导入的 API 函数来描述组件逻辑</li>
+<li>选项式 API，用包含多个选项的对象来描述组件的逻辑</li>
+<li>组合式 API，使用导入的 API 函数来描述组件逻辑</li>
 </ul>
 </li>
 <li><p>响应式系统</p>
@@ -103,7 +103,7 @@
 </ul>
 </li>
 </ul>
-<h4 id="02-搭建"><a href="#02-搭建" class="headerlink" title="02. 搭建"></a>02. 搭建</h4><p>我已经安装过了Node.js，版本为 v18.14.2。在命令行输入下面的命令，安装并执行 create-vue（Vue官方的项目脚手架工具）。</p>
+<h4 id="02-搭建"><a href="#02-搭建" class="headerlink" title="02. 搭建"></a>02. 搭建</h4><p>我已经安装过了 Node.js，版本为 v18.14.2。在命令行输入下面的命令，安装并执行 create-vue（ Vue 官方的项目脚手架工具）。</p>
 <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">npm init vue@latest</span><br></pre></td></tr></table></figure>
 
 <p>选择的可选选项：</p>
@@ -136,7 +136,7 @@
 <p>ps：安装Vue Router</p>
 <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">npm install vue-router@4</span><br></pre></td></tr></table></figure>
 
-<h4 id="04-立项"><a href="#04-立项" class="headerlink" title="04. 立项"></a>04. 立项</h4><p>既然决定通过实践了解Vue，那我就要选定一个项目内容了。我第一次接触前端知识的大气污染可视化项目，主要是通过在HTML页面中使用 jQuery 库实现数据渲染等，没有使用前端框架。于是这次我准备在Vue框架下，重新实现之前做的这个项目，最终可能会对界面效果进行比较分析。</p>
+<h4 id="04-立项"><a href="#04-立项" class="headerlink" title="04. 立项"></a>04. 立项</h4><p>既然决定通过实践了解 Vue，那我就要选定一个项目内容了。我第一次接触前端知识的大气污染可视化项目，主要是通过在HTML页面中使用 jQuery 库实现数据渲染等，没有使用前端框架。于是这次我准备在 Vue 框架下，重新实现之前做的这个项目，最终可能会对界面效果进行比较分析。</p>
 <h4 id="05-上手"><a href="#05-上手" class="headerlink" title="05. 上手"></a>05. 上手</h4><p>预期的组件树长这样：</p>
 <figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">App (root component)</span><br><span class="line">|- Visualization</span><br><span class="line">	|- InputTime</span><br><span class="line">	|- Charts</span><br><span class="line">	|- MyBar</span><br></pre></td></tr></table></figure>
 
@@ -147,16 +147,33 @@
 <p>实际上组件结构：</p>
 <figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">App (root component)</span><br><span class="line">|- assets</span><br><span class="line">	|- datas</span><br><span class="line">	|- css文件</span><br><span class="line">	|- images</span><br><span class="line">|- components</span><br><span class="line">	|- header.vue //头部组件</span><br><span class="line">	|- sidebar	//侧边栏组件</span><br><span class="line">|- router //管理路由</span><br><span class="line">|- stores</span><br><span class="line">	|- 储存可视化数据文件、侧边栏数据文件</span><br><span class="line">|- views</span><br><span class="line">	|- dashboard.vue //系统主页</span><br><span class="line">	|- 各种图表视图</span><br><span class="line">	|- 引入地图</span><br></pre></td></tr></table></figure>
 
-<p>我重新创建了一个TS版本的vue项目，发现比起直接创建的JS版本的文件夹，格式会更有条理。</p>
-<p>即上文提到的，在创建vue项目时选择了以下可选选项：</p>
+<p>我重新创建了一个TS版本的 vue 项目，发现比起直接创建的 JS 版本的文件夹，格式会更有条理。</p>
+<p>即上文提到的，在创建 vue 项目时选择了以下可选选项：</p>
 <ul>
 <li>TypeScript</li>
 <li>Vue Router</li>
 <li>Pinia</li>
 <li>Vitest</li>
 </ul>
-<p>过程中比较麻烦的地方有，高德地图和ECharts没有提供Vue版本的可参考文件。在Vue上面使用它们，在HTML网页中使用还是有比较大的区别的。</p>
-<p>另外我还在探索提供VueUse给项目添加暗黑模式。目前是已经加上了按钮，实现部分元素的切换，但是右侧内容的背景等部分未渲染。</p>
+<p>过程中比较麻烦的地方有，高德地图和 ECharts 没有提供 Vue 版本的可参考文件。在 Vue 上面使用它们，在 HTML 网页中使用还是有比较大的区别的。</p>
+<p>另外，在探索给 Vue 项目添加暗黑模式，这部分的简单实现：</p>
+<p>添加的按钮：</p>
+<p>基于 element-plus switch 组件创建了一个暗黑模式开关组件，将它放入横栏。</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">&lt;div class=&quot;flex justify-center anhei&quot;&gt;</span><br><span class="line">    &lt;span @click.stop=&quot;toggleDark()&quot;&gt;暗黑模式&lt;/span&gt;</span><br><span class="line">    &lt;el-switch size=&quot;small&quot; v-model=&quot;isDark&quot; style=&quot;--el-switch-on-color: #bde6c9;&quot; /&gt;</span><br><span class="line">&lt;/div&gt;</span><br></pre></td></tr></table></figure>
+
+<p>js部分：</p>
+<figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> &#123; useDark, useToggle &#125; <span class="keyword">from</span> <span class="string">&#x27;@vueuse/core&#x27;</span>;</span><br><span class="line"><span class="keyword">const</span> isDark = <span class="title function_">useDark</span>()</span><br><span class="line"><span class="keyword">const</span> toggleDark = <span class="title function_">useToggle</span>(isDark)</span><br></pre></td></tr></table></figure>
+
+<p>css部分：</p>
+<p>使用到两个滤镜函数：invert()、hue-rotate()。</p>
+<figure class="highlight css"><table><tr><td class="code"><pre><span class="line"><span class="selector-tag">html</span><span class="selector-class">.dark</span> &#123;</span><br><span class="line">  <span class="attribute">filter</span>: <span class="built_in">invert</span>(<span class="number">1</span>) <span class="built_in">hue-rotate</span>(<span class="number">180deg</span>);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li><p><code>invert()</code>：反相，反向输出图像着色。值为 0% 则无变化，值为 0~100% 则是线性乘子效果，值为100%则完全<strong>反转</strong>。</p>
+</li>
+<li><p><code>hue-rotate()</code>：色相旋转，<strong>减弱图像着色</strong>，处理非黑白的颜色。值为 0 deg 则无变化，值为 0~360 deg 则逐渐减弱，值超过 360 deg 则相当绕 N 圈再计算剩余的值。</p>
+</li>
+</ul>
 ]]></content>
       <categories>
         <category>技术博客</category>
