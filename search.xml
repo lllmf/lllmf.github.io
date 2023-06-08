@@ -594,4 +594,60 @@
         <tag>技术</tag>
       </tags>
   </entry>
+  <entry>
+    <title>Anaconda3</title>
+    <url>/2023/06/08/Anaconda3/</url>
+    <content><![CDATA[<h2 id="0-前言"><a href="#0-前言" class="headerlink" title="0. 前言"></a>0. 前言</h2><p>Anaconda 是可以便捷获取包且对包能够进行管理，同时对环境可以统一管理的发行版本。Anaconda 拥有 conda 包、环境管理器、开源库。这篇是本人使用 Anaconda 的笔记（不包含安装教程）。</p>
+<span id="more"></span>
+
+<h2 id="1-管理环境"><a href="#1-管理环境" class="headerlink" title="1. 管理环境"></a>1. 管理环境</h2><p>Windows系统，命令行模式，打开<code>Anaconda Prompt</code>。macOS 和 Linux 系统下，打开终端。</p>
+<h3 id="创建新环境"><a href="#创建新环境" class="headerlink" title="创建新环境"></a>创建新环境</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">conda create --name &lt;env_name&gt; &lt;package_names&gt;</span><br></pre></td></tr></table></figure>
+
+<p>例如，安装指定版本号的python环境 <code>conda create -n py310 python=3.10.8</code>。</p>
+<p>如果要在新创建的环境中创建多个包，则直接在 <code>&lt;package_names&gt;</code> 后以<strong>空格</strong>隔开，添加多个包名即可。如： <code>conda create -n python3 python=3.9 numpy pandas</code> ，环境中安装版本为3.9的python，同时也安装了 numpy 和 pandas。</p>
+<h3 id="切换环境"><a href="#切换环境" class="headerlink" title="切换环境"></a>切换环境</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">conda activate &lt;env_name&gt;</span><br></pre></td></tr></table></figure>
+
+<p>例如，切换到名为pytest39的环境<code>activate pytest39</code>。</p>
+<h3 id="退出环境"><a href="#退出环境" class="headerlink" title="退出环境"></a>退出环境</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">conda deactivate</span><br></pre></td></tr></table></figure>
+
+<p>亲测是会退到上一次的环境。</p>
+<h3 id="显示已创建环境"><a href="#显示已创建环境" class="headerlink" title="显示已创建环境"></a>显示已创建环境</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">conda info --envs</span><br><span class="line">conda info -e</span><br><span class="line">conda <span class="built_in">env</span> list</span><br></pre></td></tr></table></figure>
+
+<p>三条任一都可以。</p>
+<h3 id="复制环境"><a href="#复制环境" class="headerlink" title="复制环境"></a>复制环境</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">conda create --name &lt;new_env_name&gt; --<span class="built_in">clone</span> &lt;copied_env_name&gt;</span><br></pre></td></tr></table></figure>
+
+<h3 id="删除环境"><a href="#删除环境" class="headerlink" title="删除环境"></a>删除环境</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">conda remove --name &lt;env_name&gt; --all</span><br></pre></td></tr></table></figure>
+
+<h2 id="2-管理包"><a href="#2-管理包" class="headerlink" title="2. 管理包"></a>2. 管理包</h2><h3 id="获取当前环境中已安装的包信息"><a href="#获取当前环境中已安装的包信息" class="headerlink" title="获取当前环境中已安装的包信息"></a>获取当前环境中已安装的包信息</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">conda list</span><br></pre></td></tr></table></figure>
+
+<p>在命令行显示当前环境已安装包的包名及其版本号。</p>
+<h3 id="在指定环境中安装包"><a href="#在指定环境中安装包" class="headerlink" title="在指定环境中安装包"></a>在指定环境中安装包</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">conda install --name &lt;env_name&gt; &lt;package_name&gt;</span><br></pre></td></tr></table></figure>
+
+<p>在当前环境中安装包：<code>conda install &lt;package_name&gt;</code>。</p>
+<h3 id="使用-pip-安装包"><a href="#使用-pip-安装包" class="headerlink" title="使用 pip 安装包"></a>使用 pip 安装包</h3><p>当使用 <code>conda install</code> 无法进行安装时，可以使用pip进行安装。</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">pip install &lt;package_name&gt;</span><br></pre></td></tr></table></figure>
+
+<p><strong>pip 只是包管理器，无法对环境进行管理</strong>。因此如果想在指定环境中使用 pip 进行安装包，则需要先切换到指定环境中，再使用 pip 命令安装包。</p>
+<p><strong>pip 并不将python视为包，所以无法更新python</strong>。</p>
+<p>pip 可以安装一些 conda 无法安装的包；conda 也可以安装一些 pip 无法安装的包。</p>
+<h3 id="卸载包"><a href="#卸载包" class="headerlink" title="卸载包"></a>卸载包</h3><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">conda remove --name &lt;env_name&gt; &lt;package_name&gt;</span><br><span class="line">conda remove &lt;package_name&gt;</span><br></pre></td></tr></table></figure>
+
+<h3 id="更新包"><a href="#更新包" class="headerlink" title="更新包"></a>更新包</h3><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">conda update --all</span><br><span class="line">conda upgrade --all</span><br></pre></td></tr></table></figure>
+
+<p>两条任一都可以。</p>
+<p>更新指定包：</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">conda update &lt;package_name&gt;</span><br><span class="line">conda upgrade &lt;package_name&gt;</span><br></pre></td></tr></table></figure>
+
+
+
+
+
+]]></content>
+      <categories>
+        <category>使用工具</category>
+      </categories>
+      <tags>
+        <tag>技术</tag>
+      </tags>
+  </entry>
 </search>

@@ -2,6 +2,17 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://lllmf.github.io/2023/06/08/Anaconda3/</loc>
+    
+    <lastmod>2023-06-08T09:31:20.098Z</lastmod>
+    
+    <date>1686214234000</date>
+    <title>Anaconda3 | 阿菲的……</title>
+    
+    <desc>0. 前言Anaconda 是可以便捷获取包且对包能够进行管理，同时对环境可以统一管理的发行版本。Anaconda 拥有 conda 包、环境管理器、开源库。这篇是本人使用 Anaconda 的笔记（不包含安装教程）。</desc>
+  </url>
+  
+  <url>
     <loc>https://lllmf.github.io/2023/03/10/React-vs-Vue/</loc>
     
     <lastmod>2023-05-22T03:05:39.062Z</lastmod>

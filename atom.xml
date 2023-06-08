@@ -6,7 +6,7 @@
   <link href="https://lllmf.github.io/atom.xml" rel="self"/>
   
   <link href="https://lllmf.github.io/"/>
-  <updated>2023-05-08T06:46:41.918Z</updated>
+  <updated>2023-06-08T09:31:20.098Z</updated>
   <id>https://lllmf.github.io/</id>
   
   <author>
@@ -15,6 +15,25 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Anaconda3</title>
+    <link href="https://lllmf.github.io/2023/06/08/Anaconda3/"/>
+    <id>https://lllmf.github.io/2023/06/08/Anaconda3/</id>
+    <published>2023-06-08T08:50:34.000Z</published>
+    <updated>2023-06-08T09:31:20.098Z</updated>
+    
+    
+    <summary type="html">&lt;h2 id=&quot;0-前言&quot;&gt;&lt;a href=&quot;#0-前言&quot; class=&quot;headerlink&quot; title=&quot;0. 前言&quot;&gt;&lt;/a&gt;0. 前言&lt;/h2&gt;&lt;p&gt;Anaconda 是可以便捷获取包且对包能够进行管理，同时对环境可以统一管理的发行版本。Anaconda 拥有 conda 包、环境管理器、开源库。这篇是本人使用 Anaconda 的笔记（不包含安装教程）。&lt;/p&gt;</summary>
+    
+    
+    
+    <category term="使用工具" scheme="https://lllmf.github.io/categories/%E4%BD%BF%E7%94%A8%E5%B7%A5%E5%85%B7/"/>
+    
+    
+    <category term="技术" scheme="https://lllmf.github.io/tags/%E6%8A%80%E6%9C%AF/"/>
+    
+  </entry>
   
   <entry>
     <title>网络安全知识</title>
