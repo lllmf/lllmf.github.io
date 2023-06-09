@@ -701,6 +701,23 @@
 <p>jupyter_nbextensions_configurator是notebook用来配置插件的插件。</p>
 <p>执行上述命令后，启动Jupyter Notebook，你会发现导航栏多了“Nbextensions”的类目，点击“Nbextensions”，勾选“Table of Contents ⑵”。</p>
 <p>如果发现目录页空白，解决办法是按住鼠标拖动一下左侧目录。应该是本身的一个小bug。</p>
+<h4 id="更换-Jupyter-主题"><a href="#更换-Jupyter-主题" class="headerlink" title="更换 Jupyter 主题"></a>更换 Jupyter 主题</h4><p>使用 pip 安装：</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">pip install jupyterthemes</span><br></pre></td></tr></table></figure>
+
+<p>查看和更改样式：</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">jt -l <span class="comment">#查看样式列表</span></span><br><span class="line">jt -t 主题名 <span class="comment">#更换主题</span></span><br></pre></td></tr></table></figure>
+
+<p>例如，<code>jt -t onedork -f roboto -fs 14 -nfs 14 -tfs 14 -ofs 11</code>，<code>jt -t oceans16 -f fira -nf robotosans -tf robotosans -N -T -cellw 60% -dfs 9 -ofs 9</code>。</p>
+<p>-f(字体) -fs(字体大小) -cellw(占屏比或宽度) -ofs(输出段的字号) -T(显示工具栏) -N(显示自己主机名)。</p>
+<p>预览样式参考链接：<a href="https://www.cnblogs.com/shanger/p/12006161.html">Jupyter Notebook 更换主题（背景、字体） - 赏尔 - 博客园 (cnblogs.com)</a></p>
+<p>但感觉还是不大好看…</p>
+<h4 id="在VSCode中使用-Jupyter"><a href="#在VSCode中使用-Jupyter" class="headerlink" title="在VSCode中使用 Jupyter"></a>在VSCode中使用 Jupyter</h4><p><code>jupyter</code>插件已经并入<code>python</code>插件中了，所以安装了<code>python</code>插件就可以使用了。</p>
+<p>使用方法也很简单，创建<code>.ipynb</code>文件，就可以编辑notebook了。</p>
+<blockquote>
+<p>说到这里，了解一下<code>ipynb</code>的意思，这个格式的文件是使用 Jupyter Notebook 来编写 Python 程序时的文件，而Jupyter Notebook 之前叫作 IPython Notebook（IPython 是一个 Python 的交互式 shell，包含供 Jupyter notebook 使用的Jupyter内核）。</p>
+<p>anaconda<code>自带</code>ipython。</p>
+</blockquote>
+<p>用 VSCode 的话，编辑器界面就会好看一些。</p>
 ]]></content>
       <categories>
         <category>使用工具</category>
