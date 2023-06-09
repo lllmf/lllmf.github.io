@@ -638,10 +638,69 @@
 <p>更新指定包：</p>
 <figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">conda update &lt;package_name&gt;</span><br><span class="line">conda upgrade &lt;package_name&gt;</span><br></pre></td></tr></table></figure>
 
+<h2 id="3-Jupyter-Notebook"><a href="#3-Jupyter-Notebook" class="headerlink" title="3. Jupyter Notebook"></a>3. Jupyter Notebook</h2><p>Jupyter Notebook 是一种 Web 应用程序，能让用户开发，记录、执行代码和展示结果。可通过安装Anaconda来启动Jupyter Notebook。（换一种说法，Jupyter Notebook 是包含在了 Anaconda 里面的。）</p>
+<h3 id="启动-Jupyter-Notebook"><a href="#启动-Jupyter-Notebook" class="headerlink" title="启动 Jupyter Notebook"></a>启动 Jupyter Notebook</h3><h4 id="启动-Jupyter-Notebook-的方法"><a href="#启动-Jupyter-Notebook-的方法" class="headerlink" title="启动 Jupyter Notebook 的方法"></a>启动 Jupyter Notebook 的方法</h4><ul>
+<li>在 Anaconda Navigator 的 Home 界面，选择 Jupyter Notebook 启动。</li>
+<li>在终端中输入 jupyter notebook。启动成功后，终端不能关闭，关闭就会断开与本地服务器的链接，Jupyter Notebook 也将无法使用。</li>
+</ul>
+<h4 id="修改默认的工作目录"><a href="#修改默认的工作目录" class="headerlink" title="修改默认的工作目录"></a>修改默认的工作目录</h4><p>启动 Jupyter Notebook 会发现文件在 C 盘用户目录下。为了将其挪到 D 盘，需要进行以下步骤：</p>
+<h4 id="生成配置文件"><a href="#生成配置文件" class="headerlink" title="生成配置文件"></a>生成配置文件</h4><p>命令行输入下面的命令，生成配置文件，文件位置是在 C 盘用户目录下<code>./.jupyter/jupyter_notebook_config.py</code>。</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">jupyter notebook --generate-config</span><br></pre></td></tr></table></figure>
+
+<h4 id="修改配置文件"><a href="#修改配置文件" class="headerlink" title="修改配置文件"></a>修改配置文件</h4><p>找到上面的配置文件<code>jupyter_notebook_config.py</code>并打开，用搜索工具找到包含<code>c.NotebookApp.notebook_dir</code>的这一行，样子如下：</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="comment"># c.NotebookApp.notebook_dir = &#x27;&#x27;</span></span><br></pre></td></tr></table></figure>
+
+<p>将<code>&#39;&#39;</code>替换为目标路径，如<code>&#39;D:\\Mycodes\\myJupyter&#39;</code>。（windows 下是双斜杠<code>\\</code>，Linux 下是<code>/</code>。）最后去掉注释，让配置生效，样子如下：</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">c.NotebookApp.notebook_dir = <span class="string">&#x27;D:\\Mycodes\\myJupyter&#x27;</span></span><br></pre></td></tr></table></figure>
+
+<p><strong>注意</strong>：要新建好该路径下的文件夹，确保 Jupyter Notebook 能找到这个目标文件夹，然后再启动。否则会报错<code>Bad config encountered during initialization: No such notebook dir: ...</code>。</p>
+<h4 id="重新启动-Jupyter-Notebook"><a href="#重新启动-Jupyter-Notebook" class="headerlink" title="重新启动 Jupyter Notebook"></a>重新启动 Jupyter Notebook</h4><p>在终端中输入 Jupyter Notebook，启动。</p>
+<blockquote>
+<p>关闭之后重启可能会再次进入默认路径，需要在开始菜单找到“Jupyte Notebook”快捷键，鼠标右击 -&gt; 更多 -&gt; 打开文件位置，找到快捷方式下的“目标”，去掉后面的 “%USERPROFILE%&#x2F;“，然后点击“确定”，最后重新启动 Jupyte Notebook。</p>
+</blockquote>
+<p>浏览器地址栏中默认地将会显示：<code>http://localhost:8888</code>。其中，“localhost”指的是本机，“8888”则是端口号。</p>
+<p>如果想自定义端口号来启动Jupyter Notebook，在终端中输入以下命令：</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">jupyter notebook --port &lt;port_number&gt;</span><br><span class="line">如：</span><br><span class="line">jupyter notebook --port 8080</span><br></pre></td></tr></table></figure>
 
 
 
+<h3 id="使用-Jupyter-Notebook"><a href="#使用-Jupyter-Notebook" class="headerlink" title="使用 Jupyter Notebook"></a>使用 Jupyter Notebook</h3><h4 id="功能介绍"><a href="#功能介绍" class="headerlink" title="功能介绍"></a>功能介绍</h4><p>Jupyter Notebook 的组成部分：</p>
+<ol>
+<li>网页应用：基于<strong>网页形式</strong>，结合其他富媒体形式的工具。</li>
+<li>文档：所有交互计算、编写说明文档、数学公式、图片以及其他富媒体形式的输入输出，都是以文档的形式体现的。这些文档是<strong>后缀名为<code>.ipynb</code>的<code>JSON</code>格式文件</strong>，可导出为HTML、LaTeX、PDF等格式。</li>
+</ol>
+<p>Jupyter Notebook 的特点：</p>
+<ol>
+<li>编程的<strong>语法高亮、tab补全、缩进</strong></li>
+<li>直接通过浏览器<strong>运行代码</strong>并在代码块下方<strong>展示运行结果</strong></li>
+<li>以<strong>富媒体</strong>格式<strong>展示计算结果</strong>，格式包括：HTML，LaTeX，PNG，SVG等</li>
+<li>对代码编写说明文档或语句，支持<strong>Markdown语法</strong></li>
+<li>支持使用LaTeX编写<strong>数学性说明</strong></li>
+</ol>
+<h4 id="页面介绍"><a href="#页面介绍" class="headerlink" title="页面介绍"></a>页面介绍</h4><p>启动后，浏览器进入 Notebook 的主界面。</p>
+<p>页面包括：<code>File, Running, Clusters</code>。管理conda环境和包、添加扩展功能后会增加页面：<code>Conda, Nbextensions</code>。</p>
+<ul>
+<li>Files页面用于管理和创建文件相关的类目。<ul>
+<li>对于现有的文件，可以通过<strong>勾选文件</strong>的方式，对选中文件进行复制、重命名、移动、下载、查看、编辑和删除的操作。</li>
+<li>根据需要，在“New”下拉列表中选择想要创建文件的环境，进行创建“ipynb”格式的笔记本、“txt”格式的文档、终端或文件夹。</li>
+</ul>
+</li>
+</ul>
+<h4 id="笔记本的操作"><a href="#笔记本的操作" class="headerlink" title="笔记本的操作"></a>笔记本的操作</h4><p>在“New”下拉列表中，选择“Notebook”栏的内核。然后会进入笔记本界面。</p>
+<p>点击文件名称，可以重命名。</p>
+<p>在代码块输入代码，按<code>Ctrl + enter</code>会运行代码并在下方展示结果&#x2F;将Markdown语法编辑文本转换为视觉效果。</p>
+<p>按<code>enter</code>键，将Markdown视觉效果切换为编辑效果。</p>
+<p>按<code>A</code>键（Above）会在选定 Cell 的上方新增 Cell，按<code>B</code>键（Below）会在选定 Cell 的下方新增 Cell。</p>
+<p>可以切换，选择当前 Cell 为代码&#x2F;Markdown&#x2F;原生NBConvert。</p>
+<p>连按两次<code>D</code>键（Delete）会删除当前 Cell。</p>
+<p>按<code>Z</code>键会撤回删除操作。</p>
+<h4 id="添加Markdown生成目录的功能"><a href="#添加Markdown生成目录的功能" class="headerlink" title="添加Markdown生成目录的功能"></a>添加Markdown生成目录的功能</h4><p>通过安装扩展来实现目录的添加。</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">conda install -c conda-forge jupyter_nbextensions_configurator</span><br><span class="line">conda install -c conda-forge jupyter_contrib_nbextensions</span><br><span class="line">jupyter contrib nbextension install --user</span><br><span class="line">jupyter nbextensions_configurator <span class="built_in">enable</span> --user</span><br></pre></td></tr></table></figure>
 
+<p>jupyter_contrib_nbextensions是真正意义上的插件库。</p>
+<p>jupyter_nbextensions_configurator是notebook用来配置插件的插件。</p>
+<p>执行上述命令后，启动Jupyter Notebook，你会发现导航栏多了“Nbextensions”的类目，点击“Nbextensions”，勾选“Table of Contents ⑵”。</p>
+<p>如果发现目录页空白，解决办法是按住鼠标拖动一下左侧目录。应该是本身的一个小bug。</p>
 ]]></content>
       <categories>
         <category>使用工具</category>
