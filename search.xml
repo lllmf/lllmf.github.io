@@ -712,7 +712,7 @@
 <p>预览样式参考链接：<a href="https://www.cnblogs.com/shanger/p/12006161.html">Jupyter Notebook 更换主题（背景、字体） - 赏尔 - 博客园 (cnblogs.com)</a></p>
 <p>但感觉还是不大好看…</p>
 <h4 id="在VSCode中使用-Jupyter"><a href="#在VSCode中使用-Jupyter" class="headerlink" title="在VSCode中使用 Jupyter"></a>在VSCode中使用 Jupyter</h4><p><code>jupyter</code>插件已经并入<code>python</code>插件中了，所以安装了<code>python</code>插件就可以使用了。</p>
-<p>使用方法也很简单，创建<code>.ipynb</code>文件，就可以编辑notebook了。</p>
+<p>使用方法也很简单，创建<code>.ipynb</code>文件，就可以编辑notebook了。运行代码前，会提示你选择内核源一般就是选一个Python环境。</p>
 <blockquote>
 <p>说到这里，了解一下<code>ipynb</code>的意思，这个格式的文件是使用 Jupyter Notebook 来编写 Python 程序时的文件，而Jupyter Notebook 之前叫作 IPython Notebook（IPython 是一个 Python 的交互式 shell，包含供 Jupyter notebook 使用的Jupyter内核）。</p>
 <p>anaconda<code>自带</code>ipython。</p>
